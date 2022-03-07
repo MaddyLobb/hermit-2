@@ -1,0 +1,44 @@
+/* =============
+    Variables
+============= */
+
+// Define the breakpoints
+// Small tablets and large smartphones
+$screen-sm-min: 576px;
+
+// Small tablets
+$screen-md-min: 768px;
+
+// Large tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large desktops
+$screen-xl-min: 1200px;
+
+// Colors
+$white: #fff;
+// $darkPurple: #2E1845;
+// $purple: #A6416E;
+// $pink: #C26B7A;
+// $orange: #D58A62;
+// $tan: #F9D5AE;
+
+:root {
+    --white: #fff;
+    --darkpurple: #2E1845;
+    --purple: #A6416E;
+    --pink: #C26B7A;
+    --lightpink: #FFC3A4;
+    --tan: #F9D5AE; 
+}
+
+[data-theme="dark"] {
+
+    --white: #fff;
+    --darkpurple: #22152F;
+    --purple: #722B4A;
+    --pink: #A54E5D;
+    --lightpink: #DC9C7C;
+    --tan: #DDB68B; 
+}
+

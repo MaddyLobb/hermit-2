@@ -1,0 +1,82 @@
+/* =============
+    Header
+============= */
+
+header {
+	background-color: var(--purple);
+	left: 0;
+	// position: fixed;
+	top: 0;
+	width: 100%;
+
+		#navigation-contain{
+			@include xl{
+
+				display: grid;
+			grid-template-areas: ". contain .";
+			grid-template-columns: auto 1200px auto;
+
+			}
+		
+		#navigation-header {
+
+			grid-area: contain;
+			display: grid;
+			grid-template-areas: "survival search burger"
+				". nav nav";
+			grid-template-columns: 20% 60% 20%
+			auto auto auto;
+			padding-left: 16px;
+			// padding-top: 32px;
+			
+			@include lg {
+				grid-template-areas: "survival nav search";
+				grid-template-columns: 10% auto 10%;
+				padding-right: 16px;
+			}
+			
+			#logo-container {
+				grid-area: survival;
+				
+			}
+
+			#search-icon-flex{
+				display: flex;
+				justify-content: center;
+
+				#search-icon-full{
+
+					grid-area: search;
+					width: 250px;
+					
+				}
+				
+			}
+
+			#burger-container {
+				grid-area: burger;
+				@include lg {
+					display: none !important;
+				}
+
+				i {
+					color: blue;
+					cursor: pointer;
+					font-size: rem-calc(50);
+				}
+
+			}
+
+			#nav-container {
+				display: none;
+				grid-area: nav;
+				padding: 20px 10px 10px;
+				color: #fff;
+				
+				@include lg {
+					display: block !important;
+				}
+			}
+		}
+	}
+}

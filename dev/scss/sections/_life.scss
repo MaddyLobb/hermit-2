@@ -1,0 +1,257 @@
+/* =============
+    Life
+============= */
+
+#life{
+    height: 100%;
+    width: 100vw;
+    margin-top: -90px;
+
+    #purpleWave{
+        width: 100%;
+        margin-bottom: -10px;
+    }
+
+    #life-content-container{
+        height: 100%;
+        width: 100%;
+        background-color: var(--purple);
+    }
+
+    #life-content{
+        display: grid;
+        grid-template-columns: 16px auto 16px;
+        grid-template-areas: ". life-text ."
+                             ". life-svg ."
+                             ". life-image .";
+
+        row-gap: 20px;
+
+        @include md{
+            grid-template-columns: 55% auto;
+            grid-template-areas: "life-text life-image"
+                                 ". life-svg";
+
+            column-gap: 20px;
+            padding-bottom: 15%;
+        }
+
+        @include lg{
+            padding-top: 0%;
+        }
+
+
+        #life-text-container{
+            grid-area: life-text;
+
+            height: 100%;
+            width: 100%;
+
+            #life-text{
+
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                padding: 50px 20px;
+                border: 5px white solid;
+                border-radius: 80px;
+                text-align: center;
+                color: var(--lightpink);
+
+                margin-top: 50px;
+
+                @include md{
+                    padding: 80px 30px;
+                    max-width: 450px;
+                    margin-left: 40px;
+
+                }
+
+                @include lg{
+                    max-width: 100%;
+                }
+
+                h2{
+                    font-size: rem-calc(26);
+
+                    @include md{
+                        font-size: rem-calc(64); 
+                    }
+                }
+
+                h3{
+                    margin: 25px 0px;
+                    font-size: rem-calc(16);
+
+                    @include md{
+                        margin: 55px 0px;
+                        font-size: rem-calc(24); 
+                    }
+                }
+
+                p{
+                    font-size: rem-calc(16);
+                    line-height: rem-calc(20);
+                    padding: 0px 10px 16px 10px;
+
+                    @include md{
+                        font-size: rem-calc(18); 
+                        line-height: rem-calc(25);
+                        padding: 0px 16px 16px 16px;
+                    }
+                }
+            }
+
+        }
+    }
+
+    #life-image-container{
+        grid-area: life-image;
+        height: 100%;
+        width: 100%;
+        margin-bottom: 140px;
+
+        @include md{
+            padding-top: 0px;
+            margin-bottom:0px;
+        }
+
+        ul{
+            width: 100%;
+            height: 150px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-evenly;
+
+            @include md{
+                flex-direction: column;
+                justify-content: center;
+                height: 100%;
+            }
+
+            li{
+                height: 100%;
+                width: 100%;
+
+                background-position: center;
+                background-size: cover; 
+                border: 5px white solid;
+                border-radius: 20px;
+                height: 150px;
+                width: 150px;
+                
+            }
+        }
+
+    }
+
+    #life-image-1{
+        background-image: url("../img/HC3.jpg");
+
+        @include md{
+            display: block;
+
+        }
+    }
+
+    #life-image-2{
+        background-image: url("../img/HC4.jpg");
+        display: none;
+
+        @include lg{
+            display: block;
+            margin-top: 30px;
+        }
+    }
+
+    #life-illustration-container{
+        grid-area: life-svg;
+
+        height: 30px;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+
+        @include md{
+            height: 700px;
+            position: absolute;
+            justify-content:right;
+            align-items: center;
+        }
+
+        #life-illustrations{
+            width: 80%;
+
+             @include md{
+                width: 35%;
+                margin-right: 40px;
+            }
+             
+        }
+    
+    }
+    #tan-star-1{
+
+        @include md{
+            display: none;
+
+        }
+
+        @include lg{
+            display: block;
+        }
+    }
+
+    #tan-star-2{
+        display: none;
+
+        @include md{
+            display: block;
+        }
+    }
+
+    #tan-star-3{
+        display: none;
+
+        @include md{
+            display: block;
+        }
+    }
+
+    .carousel-1 {
+        height: 100%;
+        width: 100%;
+
+        @include md{
+            height: 750px;
+            width: 458px;  
+        }
+
+        .carousel__nav{
+            display: none;
+        }
+
+        .carousel__slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 0rem;
+          
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel__dots {
+            color: var(--white);
+            margin-top: 10px;
+            z-index: 20;
+            position: static;
+        }
+    }
+
+}

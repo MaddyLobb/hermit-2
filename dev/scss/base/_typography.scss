@@ -1,0 +1,49 @@
+/* =============
+    Typography
+============= */
+h1,h2,h3,h4{
+    margin: 0;
+    padding: 0;
+    font-family: Staatliches;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#one{
+    font-size: rem-calc(72);
+    color: transparent;
+    -webkit-text-stroke: 1px #2E1845;
+    -webkit-text-fill-color: transparent;
+}
+
+#two{
+    font-size: rem-calc(72);
+    color: transparent;
+    -webkit-text-stroke: 1px #A6416E;
+    -webkit-text-fill-color: transparent;
+}
+
+#three{
+    font-size: rem-calc(72);
+    color: transparent;
+    -webkit-text-stroke: 1px #C26B7A;
+    -webkit-text-fill-color: transparent;
+}
+
+#four{
+    font-size: rem-calc(72);
+    color: transparent;
+    -webkit-text-stroke: 1px #D58A62;
+    -webkit-text-fill-color: transparent;
+}
+
+#five{
+    font-size: rem-calc(72);
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+    -webkit-text-fill-color: transparent;
+}

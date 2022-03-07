@@ -1,0 +1,155 @@
+/* =============
+    Shell
+============= */
+
+#shell{
+    height: 100%;
+    width: 100vw;
+    margin-top: -90px;
+    
+    #pinkWave{
+        width: 100%;
+        margin-bottom: -15px;
+        z-index: 2;
+    }
+
+    .shell{
+        background-color: #C26B7A;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        padding-bottom: 15%;
+        color: var(--tan);
+
+        @include xl{
+            display: grid;
+		grid-template-areas: ". contain .";
+		grid-template-columns: auto 1200px auto;
+        }
+
+    >ul{
+        border: 5px white solid;
+        border-radius: 80px;
+        max-width: 1200px;
+        margin: 50px 20px;
+        padding: 50px 20px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        @include md{
+            padding: 80px 30px;
+        }
+
+         @include xl{
+            grid-area: contain;
+            padding: 100px 0px;
+        }
+
+         #shell-title{
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            h2{
+                font-size: rem-calc(26);
+
+                @include md{
+                    font-size: rem-calc(64); 
+                }
+            }
+
+            h3{
+                margin: 25px 0px;
+                font-size: rem-calc(16);
+
+                @include md{
+                    margin: 55px 0px;
+                    font-size: rem-calc(24); 
+                }
+            }
+        }
+            #shell-svgs{
+
+                display: grid;
+		grid-template-areas: "shell";
+		grid-template-columns: auto;
+
+        padding-top: 10vh;
+                
+                >div{
+                    
+                    >svg{
+                        width: 300px;
+
+                        @include md{
+                            width: 200px;
+                        }
+
+                        @include lg{
+                            width: 300px;
+                        }
+                    }   
+                }
+
+                #crab-body{
+                    grid-area: shell;
+
+                    z-index: 2;
+
+                    display: flex;
+                    // align-items: center;
+                    justify-content: center;
+                    
+                }
+
+                #shells{
+                    grid-area: shell;
+                    z-index: 1;
+
+                    margin-top: -15vh;
+
+                    display: flex;
+
+                    #shell1{
+                        display: none;
+
+                        @include md{
+                            display: list-item;
+                        }
+                    }
+
+                    #shell3{
+                        display: none;
+
+                        @include md{
+                            display: list-item;
+                        }
+                    }
+
+                }
+            
+            }
+
+            #shell-p{
+                    p{
+                        font-size: rem-calc(16);
+                        line-height: rem-calc(20);
+                        padding: 0px 10px 16px 10px;
+                        text-align: center;
+        
+                        @include md{
+                            font-size: rem-calc(18); 
+                            line-height: rem-calc(25);
+                            padding: 0px 16px 16px 16px;
+                        }
+                    }
+            }
+     }
+        
+    }
+}

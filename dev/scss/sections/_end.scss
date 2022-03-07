@@ -1,0 +1,130 @@
+/* =============
+    End
+============= */
+#end{
+    width: 100vw;
+    margin-top: -90px;
+
+    #darkPurpleWave{
+        width: 100%;
+        margin-bottom: -15px;
+    }
+    #end-content-container{
+        height: 100%;
+        width: 100%;
+        background-color: var(--darkpurple);
+
+        #end-content{
+            display: grid;
+            grid-template-columns: 16px auto 16px;
+            grid-template-areas: ". end-text ."
+                                 ". end-svg .";
+    
+            row-gap: 20px;
+
+            @include md{
+                grid-template-columns: 55% auto;
+                grid-template-areas: "end-text end-svg";
+                                                         
+                column-gap: 20px;
+                padding-bottom: 15%;
+            }
+
+            @include lg{
+                padding-top: 0%;
+            }
+
+            #end-text-container{
+                grid-area: end-text;
+
+                height: 100%;
+                width: 100%;
+
+                #end-text{
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+    
+                    padding: 50px 20px;
+                    border: 5px white solid;
+                    border-radius: 80px;
+                    text-align: center;
+                    color: var(--tan);
+
+                    margin-top: 50px;
+    
+                    @include md{
+                        padding: 80px 30px;
+                        max-width: 450px;
+                        margin-left: 40px;
+    
+                    }
+    
+                    @include lg{
+                        max-width: 100%;
+                    }
+    
+                    h2{
+                        font-size: rem-calc(26);
+    
+                        @include md{
+                            font-size: rem-calc(64); 
+                        }
+                    }
+    
+                    h3{
+                        margin: 25px 0px;
+                        font-size: rem-calc(16);
+    
+                        @include md{
+                            margin: 55px 0px;
+                            font-size: rem-calc(24); 
+                        }
+                    }
+    
+                    p{
+                        font-size: rem-calc(16);
+                        padding: 0px 10px 16px 10px;
+                        line-height: rem-calc(20);
+    
+    
+                        @include md{
+                            font-size: rem-calc(18); 
+                            padding: 0px 16px 16px 16px;
+                        }
+                    }
+                }
+            }
+
+            #end-illustration-container{
+                grid-area: end-svg;
+    
+                width: 100%;
+        
+                display: flex;
+                justify-content: center;
+                align-items: center;
+        
+                @include md{
+                    height: 800px;
+                    position: absolute;
+                    justify-content:right;
+                    align-items: center;
+                }
+        
+                #end-illustrations{
+                    width: 50%;
+                    padding-bottom: 5%;
+        
+                     @include md{
+                        width: 35%;
+                        margin-right: 40px;
+                        padding-bottom: 20px;
+                    }
+                     
+                }
+            
+            }
+        }
+    }
+}
