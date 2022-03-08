@@ -16,6 +16,10 @@
         height: 100%;
         width: 100%;
         background-color: var(--purple);
+        padding-bottom: 25%;
+        @include md{
+            padding-bottom: 15%;
+        }
     }
 
     #life-content{
@@ -23,17 +27,14 @@
         grid-template-columns: 16px auto 16px;
         grid-template-areas: ". life-text ."
                              ". life-svg ."
-                             ". life-image .";
-
-        row-gap: 20px;
+                            ". life-image .";
 
         @include md{
             grid-template-columns: 55% auto;
-            grid-template-areas: "life-text life-image"
-                                 ". life-svg";
+            grid-template-areas: "life-text life-svg";
+                                //  ". life-svg";
 
             column-gap: 20px;
-            padding-bottom: 15%;
         }
 
         @include lg{
@@ -110,11 +111,11 @@
         grid-area: life-image;
         height: 100%;
         width: 100%;
-        margin-bottom: 140px;
 
         @include md{
             padding-top: 0px;
             margin-bottom:0px;
+            grid-area: life-svg;
         }
 
         ul{
@@ -170,7 +171,7 @@
     #life-illustration-container{
         grid-area: life-svg;
 
-        height: 30px;
+        height: 100px;
         width: 100%;
 
         display: flex;

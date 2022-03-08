@@ -24,14 +24,18 @@ header {
 			display: grid;
 			grid-template-areas: "survival search burger"
 				". nav nav";
-			grid-template-columns: 20% 60% 20%
+			grid-template-columns: 15% 65% 15%
 			auto auto auto;
 			padding-left: 16px;
 			// padding-top: 32px;
+
+			@include md{
+				grid-template-columns: 10% auto 10%
+			}
 			
 			@include lg {
 				grid-template-areas: "survival nav search";
-				grid-template-columns: 10% auto 10%;
+				grid-template-columns: 10% auto 20%;
 				padding-right: 16px;
 			}
 			
@@ -56,12 +60,8 @@ header {
 			#light-dark{
 				// display: flex;
 				// justify-content: center;
-
-				#light-dark-full{
-
+				@include lg{
 					grid-area: search;
-					//width: 500px;
-					
 				}
 				
 			}
@@ -70,8 +70,10 @@ header {
 				align-items: center;
 				justify-content: center;
 				justify-content: column;
+
+				width: 100%;
 			
-				margin-left: 20px;
+				//margin-left: 20px;
 			  
 				p {
 				  margin-left: 10px;

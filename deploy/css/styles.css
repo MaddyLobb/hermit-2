@@ -531,28 +531,35 @@ header #navigation-contain #navigation-header {
   grid-area: contain;
   display: grid;
   grid-template-areas: "survival search burger" ". nav nav";
-  grid-template-columns: 20% 60% 20% auto auto auto;
+  grid-template-columns: 15% 65% 15% auto auto auto;
   padding-left: 16px;
+}
+@media (min-width: 768px) {
+  header #navigation-contain #navigation-header {
+    grid-template-columns: 10% auto 10%;
+  }
 }
 @media (min-width: 992px) {
   header #navigation-contain #navigation-header {
     grid-template-areas: "survival nav search";
-    grid-template-columns: 10% auto 10%;
+    grid-template-columns: 10% auto 20%;
     padding-right: 16px;
   }
 }
 header #navigation-contain #navigation-header #logo-container {
   grid-area: survival;
 }
-header #navigation-contain #navigation-header #light-dark #light-dark-full {
-  grid-area: search;
+@media (min-width: 992px) {
+  header #navigation-contain #navigation-header #light-dark {
+    grid-area: search;
+  }
 }
 header #navigation-contain #navigation-header .theme-switch-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
   justify-content: column;
-  margin-left: 20px;
+  width: 100%;
 }
 header #navigation-contain #navigation-header .theme-switch-wrapper p {
   margin-left: 10px;
@@ -635,7 +642,7 @@ header #navigation-contain #navigation-header #nav-container a {
     Footer
 ============= */
 footer {
-  background-color: #A6416E;
+  background-color: var(--purple);
   display: grid;
   grid-template-areas: ". footer .";
   grid-template-columns: 10px auto 10px;
@@ -664,7 +671,7 @@ footer > div {
 footer > div h1 {
   font-size: 1.25rem;
   margin-bottom: 10px;
-  color: #2E1845;
+  color: var(--darkpurple);
 }
 @media (min-width: 768px) {
   footer > div h1 {
@@ -683,7 +690,7 @@ footer > div h1 {
   }
 }
 footer > div h1 span {
-  color: #F9D5AE;
+  color: var(--tan);
 }
 footer > div ul {
   display: flex;
@@ -694,7 +701,7 @@ footer > div ul li {
 }
 footer > div ul li a:link,
 footer > div ul li a:visited {
-  color: #2E1845;
+  color: var(--darkpurple);
   font-size: 1.875rem;
   transition: 0.25s;
 }
@@ -739,42 +746,40 @@ footer > div ul li a:visited:active {
 #intro #intro-container {
   background-color: var(--tan);
   height: 100%;
-  width: 100vw;
-  display: grid;
   margin-top: -19px;
-  padding-bottom: 15%;
-  grid-template-areas: ". one ." ". two .";
-  grid-template-columns: repeat(3, 1fr);
+  padding-bottom: 20%;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 @media (min-width: 768px) {
   #intro #intro-container {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "one two";
+    padding-bottom: 15%;
   }
 }
 #intro .intro {
-  grid-area: one;
   height: 100%;
   width: 100%;
+  padding-top: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 @media (min-width: 768px) {
   #intro .intro {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 0%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 5%;
   }
 }
 #intro .intro aside {
-  width: 80vw;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-@media (min-width: 768px) {
-  #intro .intro aside {
-    width: 40vw;
-  }
 }
 #intro .intro aside div {
   color: var(--darkpurple);
@@ -787,12 +792,11 @@ footer > div ul li a:visited:active {
   #intro .intro aside div {
     padding: 80px 30px;
     max-width: 450px;
-    margin-left: 40px;
   }
 }
 @media (min-width: 992px) {
   #intro .intro aside div {
-    max-width: 100%;
+    max-width: 500px;
   }
 }
 #intro .intro aside div h2 {
@@ -826,32 +830,33 @@ footer > div ul li a:visited:active {
   }
 }
 #intro .intro #crab {
-  grid-area: two;
-  margin-top: -20%;
-  width: 40vh;
+  margin-top: 30px;
+  width: 50%;
   height: 100%;
 }
 @media (min-width: 768px) {
   #intro .intro #crab {
     height: 100%;
-    width: 50vw;
+    width: 30%;
     margin-top: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
-  #intro .intro #crab svg {
-    width: 60%;
+}
+@media (min-width: 992px) {
+  #intro .intro #crab {
+    width: 35%;
   }
 }
 
 /* =============
     Food
 ============= */
+/* =============
+    Food
+============= */
 #food {
   height: 100%;
   width: 100vw;
-  margin-top: -80px;
+  margin-top: -90px;
 }
 #food #orangeWave {
   width: 100%;
@@ -862,49 +867,78 @@ footer > div ul li a:visited:active {
   width: 100%;
   display: flex;
   padding-bottom: 15%;
-  background-color: #FFC3A4;
+  background-color: var(--lightpink);
+  display: grid;
+  grid-template-columns: 16px auto 16px;
+  grid-template-areas: ". food-text ." ". food-image .";
+  row-gap: 20px;
+}
+@media (min-width: 768px) {
+  #food .food {
+    grid-template-columns: auto 50%;
+    grid-template-areas: "food-image food-text";
+  }
 }
 #food .food > div {
-  width: 50vw;
-  padding: 2vh 2vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  grid-area: food-image;
 }
 #food .food > div ul {
   display: grid;
-  grid-template-columns: 260px 260px;
-  grid-template-rows: repeat(4, 130px);
-  grid-template-areas: ". gallery-1" "gallery-2 gallery-1" "gallery-2 gallery-3" ". gallery-3";
+  grid-template-columns: auto;
+  grid-template-areas: "gallery-1";
+}
+@media (min-width: 768px) {
+  #food .food > div ul {
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: ". gallery-1" "gallery-2 gallery-1" "gallery-2 gallery-3" ". gallery-3";
+    gap: 10%;
+  }
 }
 #food .food > div ul li {
   background-position: center;
   background-size: cover;
-  margin: 2vh 1vw;
   border: solid white 3px;
   border-radius: 10%;
 }
 #food .food > div ul #gallery-1 {
   background-image: url("../img/HC1.jpg");
   grid-area: gallery-1;
+  min-width: 150px;
+  min-height: 150px;
 }
 #food .food > div ul #gallery-2 {
   background-image: url("../img/HC5.jpg");
   grid-area: gallery-2;
+  min-width: 150px;
+  min-height: 150px;
+  display: none;
+}
+@media (min-width: 768px) {
+  #food .food > div ul #gallery-2 {
+    display: block;
+  }
 }
 #food .food > div ul #gallery-3 {
   background-image: url("../img/HC2.jpg");
   grid-area: gallery-3;
+  min-width: 150px;
+  min-height: 150px;
+  display: none;
+}
+@media (min-width: 768px) {
+  #food .food > div ul #gallery-3 {
+    display: block;
+  }
 }
 #food .food aside {
-  width: 50vw;
+  grid-area: food-text;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--purple);
 }
 #food .food aside div {
-  width: 50%;
   padding: 70px 15px;
   border: 5px white solid;
   border-radius: 80px;
@@ -955,7 +989,7 @@ footer > div ul li a:visited:active {
   z-index: 2;
 }
 #shell .shell {
-  background-color: #C26B7A;
+  background-color: var(--pink);
   height: 100%;
   width: 100%;
   display: flex;
@@ -1092,19 +1126,23 @@ footer > div ul li a:visited:active {
   height: 100%;
   width: 100%;
   background-color: var(--purple);
+  padding-bottom: 25%;
+}
+@media (min-width: 768px) {
+  #life #life-content-container {
+    padding-bottom: 15%;
+  }
 }
 #life #life-content {
   display: grid;
   grid-template-columns: 16px auto 16px;
   grid-template-areas: ". life-text ." ". life-svg ." ". life-image .";
-  row-gap: 20px;
 }
 @media (min-width: 768px) {
   #life #life-content {
     grid-template-columns: 55% auto;
-    grid-template-areas: "life-text life-image" ". life-svg";
+    grid-template-areas: "life-text life-svg";
     column-gap: 20px;
-    padding-bottom: 15%;
   }
 }
 @media (min-width: 992px) {
@@ -1174,12 +1212,12 @@ footer > div ul li a:visited:active {
   grid-area: life-image;
   height: 100%;
   width: 100%;
-  margin-bottom: 140px;
 }
 @media (min-width: 768px) {
   #life #life-image-container {
     padding-top: 0px;
     margin-bottom: 0px;
+    grid-area: life-svg;
   }
 }
 #life #life-image-container ul {
@@ -1227,7 +1265,7 @@ footer > div ul li a:visited:active {
 }
 #life #life-illustration-container {
   grid-area: life-svg;
-  height: 30px;
+  height: 100px;
   width: 100%;
   display: flex;
   justify-content: center;

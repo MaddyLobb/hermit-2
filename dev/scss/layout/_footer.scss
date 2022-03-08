@@ -3,7 +3,7 @@
 ============= */
 
 footer {
-    background-color: #A6416E;
+    background-color: var(--purple);
     display: grid;
     grid-template-areas: ". footer .";
     grid-template-columns: 10px auto 10px;
@@ -31,7 +31,7 @@ footer {
         h1 {
             font-size: rem-calc(20);
             margin-bottom: 10px;
-            color: #2E1845;
+            color: var(--darkpurple);
             @include md {
               
                 padding-bottom: 5px;
@@ -48,7 +48,7 @@ footer {
             }
 
             span {
-                color: #F9D5AE;
+                color: var(--tan);
             }
         }
 
@@ -61,7 +61,7 @@ footer {
 
                 a:link,
                 a:visited {
-                    color: #2E1845;
+                    color: var(--darkpurple);
                     font-size: rem-calc(30);
                     transition: 0.25s;
 
