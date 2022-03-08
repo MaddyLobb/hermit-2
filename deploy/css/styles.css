@@ -1049,61 +1049,66 @@ footer > div ul li a:visited:active {
     font-size: 1.5rem;
   }
 }
-#shell .shell > ul #shell-svgs {
+#shell .shell > ul #shell-title #left-color-picker-container {
+  display: grid;
+  grid-template-areas: "star-color";
+  grid-template-columns: auto;
+}
+#shell .shell > ul #shell-title #left-color-picker-container > div > svg {
+  min-height: 200px;
+  max-width: 200px;
+}
+#shell .shell > ul #shell-title #left-color-picker-container #l-star-1 {
+  grid-area: star-color;
+  min-height: 100px;
+  width: 100px;
+}
+#shell .shell > ul #shell-title #shell-svgs {
   display: grid;
   grid-template-areas: "shell";
   grid-template-columns: auto;
   padding-top: 10vh;
 }
-#shell .shell > ul #shell-svgs > div > svg {
+#shell .shell > ul #shell-title #shell-svgs > div > svg {
   width: 300px;
 }
 @media (min-width: 768px) {
-  #shell .shell > ul #shell-svgs > div > svg {
-    width: 200px;
+  #shell .shell > ul #shell-title #shell-svgs > div > svg {
+    min-width: 200px;
+    min-height: 200px;
   }
 }
 @media (min-width: 992px) {
-  #shell .shell > ul #shell-svgs > div > svg {
+  #shell .shell > ul #shell-title #shell-svgs > div > svg {
     width: 300px;
   }
 }
-#shell .shell > ul #shell-svgs #crab-body {
+#shell .shell > ul #shell-title #shell-svgs #crab-body {
   grid-area: shell;
   z-index: 2;
   display: flex;
   justify-content: center;
 }
-#shell .shell > ul #shell-svgs #shells {
+#shell .shell > ul #shell-title #shell-svgs #shells {
   grid-area: shell;
   z-index: 1;
   margin-top: -15vh;
   display: flex;
+  min-width: 200px;
+  min-height: 200px;
 }
-#shell .shell > ul #shell-svgs #shells #shell1 {
-  display: none;
+#shell .shell > ul #shell-title #shell2 {
+  min-width: 200px;
+  min-height: 200px;
 }
-@media (min-width: 768px) {
-  #shell .shell > ul #shell-svgs #shells #shell1 {
-    display: list-item;
-  }
-}
-#shell .shell > ul #shell-svgs #shells #shell3 {
-  display: none;
-}
-@media (min-width: 768px) {
-  #shell .shell > ul #shell-svgs #shells #shell3 {
-    display: list-item;
-  }
-}
-#shell .shell > ul #shell-p p {
+#shell .shell > ul #shell-title #shell-p p {
   font-size: 1rem;
   line-height: 1.25rem;
   padding: 0px 10px 16px 10px;
   text-align: center;
 }
 @media (min-width: 768px) {
-  #shell .shell > ul #shell-p p {
+  #shell .shell > ul #shell-title #shell-p p {
     font-size: 1.125rem;
     line-height: 1.5625rem;
     padding: 0px 16px 16px 16px;

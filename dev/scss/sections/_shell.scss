@@ -27,28 +27,28 @@
 		grid-template-columns: auto 1200px auto;
         }
 
-    >ul{
-        border: 5px white solid;
-        border-radius: 80px;
-        max-width: 1200px;
-        margin: 50px 20px;
-        padding: 50px 20px;
+        >ul{
+            border: 5px white solid;
+            border-radius: 80px;
+            max-width: 1200px;
+            margin: 50px 20px;
+            padding: 50px 20px;
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+    
+            @include md{
+                padding: 80px 30px;
+            }
+    
+             @include xl{
+                grid-area: contain;
+                padding: 100px 0px;
+            }
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-
-        @include md{
-            padding: 80px 30px;
-        }
-
-         @include xl{
-            grid-area: contain;
-            padding: 100px 0px;
-        }
-
-         #shell-title{
+        #shell-title{
            
             display: flex;
             justify-content: center;
@@ -72,14 +72,33 @@
                     font-size: rem-calc(24); 
                 }
             }
-        }
+
+            #left-color-picker-container{
+                display: grid;
+		        grid-template-areas: "star-color";
+		        grid-template-columns: auto;
+
+                >div{
+
+                    >svg{
+                        min-height: 200px;
+                        max-width: 200px;
+                    }
+                }
+
+                #l-star-1{
+                    grid-area: star-color;
+                    min-height: 100px;
+                    width: 100px;
+                }
+            }
             #shell-svgs{
 
                 display: grid;
-		grid-template-areas: "shell";
-		grid-template-columns: auto;
+		        grid-template-areas: "shell";
+		        grid-template-columns: auto;
 
-        padding-top: 10vh;
+                padding-top: 10vh;
                 
                 >div{
                     
@@ -87,7 +106,8 @@
                         width: 300px;
 
                         @include md{
-                            width: 200px;
+                            min-width: 200px;
+                            min-height: 200px;
                         }
 
                         @include lg{
@@ -104,6 +124,7 @@
                     display: flex;
                     // align-items: center;
                     justify-content: center;
+
                     
                 }
 
@@ -115,41 +136,51 @@
 
                     display: flex;
 
-                    #shell1{
-                        display: none;
+                    min-width: 200px;
+                    min-height: 200px;
 
-                        @include md{
-                            display: list-item;
-                        }
-                    }
+                    // #shell1{
+                    //     display: none;
 
-                    #shell3{
-                        display: none;
+                    //     @include md{
+                    //         display: list-item;
+                    //     }
+                    // }
 
-                        @include md{
-                            display: list-item;
-                        }
-                    }
+                    // #shell3{
+                    //     display: none;
+
+                    //     @include md{
+                    //         display: list-item;
+                    //     }
+                    // }
 
                 }
             
             }
 
-            #shell-p{
-                    p{
-                        font-size: rem-calc(16);
-                        line-height: rem-calc(20);
-                        padding: 0px 10px 16px 10px;
-                        text-align: center;
-        
-                        @include md{
-                            font-size: rem-calc(18); 
-                            line-height: rem-calc(25);
-                            padding: 0px 16px 16px 16px;
-                        }
-                    }
+            #shell2{
+                min-width: 200px;
+                min-height: 200px; 
             }
-     }
+
+            #shell-p{
+                p{
+                    font-size: rem-calc(16);
+                    line-height: rem-calc(20);
+                    padding: 0px 10px 16px 10px;
+                    text-align: center;
+    
+                    @include md{
+                        font-size: rem-calc(18); 
+                        line-height: rem-calc(25);
+                        padding: 0px 16px 16px 16px;
+                    }
+                }
+            }
+        }
+
+    }   
         
     }
 }
