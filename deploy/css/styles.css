@@ -544,13 +544,62 @@ header #navigation-contain #navigation-header {
 header #navigation-contain #navigation-header #logo-container {
   grid-area: survival;
 }
-header #navigation-contain #navigation-header #search-icon-flex {
-  display: flex;
-  justify-content: center;
-}
-header #navigation-contain #navigation-header #search-icon-flex #search-icon-full {
+header #navigation-contain #navigation-header #light-dark #light-dark-full {
   grid-area: search;
-  width: 250px;
+  width: 500px;
+}
+header #navigation-contain #navigation-header .theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+header #navigation-contain #navigation-header .theme-switch-wrapper p {
+  margin-left: 10px;
+  font-size: 1rem;
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+header #navigation-contain #navigation-header .theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+header #navigation-contain #navigation-header .theme-switch input {
+  display: none;
+}
+header #navigation-contain #navigation-header .slider {
+  background-color: var(--darkpurple);
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+header #navigation-contain #navigation-header .slider:before {
+  background-color: var(--white);
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+header #navigation-contain #navigation-header input:checked + .slider {
+  background-color: var(--white);
+}
+header #navigation-contain #navigation-header input:checked + .slider:before {
+  transform: translateX(26px);
+  background-color: var(--darkpurple);
+}
+header #navigation-contain #navigation-header .slider.round {
+  border-radius: 34px;
+}
+header #navigation-contain #navigation-header .slider.round:before {
+  border-radius: 50%;
 }
 header #navigation-contain #navigation-header #burger-container {
   grid-area: burger;
@@ -569,12 +618,16 @@ header #navigation-contain #navigation-header #nav-container {
   display: none;
   grid-area: nav;
   padding: 20px 10px 10px;
-  color: #fff;
 }
 @media (min-width: 992px) {
   header #navigation-contain #navigation-header #nav-container {
     display: block !important;
   }
+}
+header #navigation-contain #navigation-header #nav-container a {
+  color: #fff;
+  font-family: Staatliches;
+  font-size: 1.25rem;
 }
 
 /* =============
