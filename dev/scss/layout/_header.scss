@@ -54,13 +54,13 @@ header {
 			// }
 
 			#light-dark{
-				//display: flex;
-				//justify-content: center;
+				// display: flex;
+				// justify-content: center;
 
 				#light-dark-full{
 
 					grid-area: search;
-					width: 500px;
+					//width: 500px;
 					
 				}
 				
@@ -68,6 +68,8 @@ header {
 			.theme-switch-wrapper {
 				display: flex;
 				align-items: center;
+				justify-content: center;
+				justify-content: column;
 			
 				margin-left: 20px;
 			  

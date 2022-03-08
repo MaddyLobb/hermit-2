@@ -546,11 +546,12 @@ header #navigation-contain #navigation-header #logo-container {
 }
 header #navigation-contain #navigation-header #light-dark #light-dark-full {
   grid-area: search;
-  width: 500px;
 }
 header #navigation-contain #navigation-header .theme-switch-wrapper {
   display: flex;
   align-items: center;
+  justify-content: center;
+  justify-content: column;
   margin-left: 20px;
 }
 header #navigation-contain #navigation-header .theme-switch-wrapper p {
