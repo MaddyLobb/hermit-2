@@ -1009,10 +1009,6 @@ footer > div ul li a:visited:active {
   max-width: 1200px;
   margin: 50px 20px;
   padding: 50px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 @media (min-width: 768px) {
   #shell .shell > ul {
@@ -1048,20 +1044,6 @@ footer > div ul li a:visited:active {
     margin: 55px 0px;
     font-size: 1.5rem;
   }
-}
-#shell .shell > ul #shell-title #left-color-picker-container {
-  display: grid;
-  grid-template-areas: "star-color";
-  grid-template-columns: auto;
-}
-#shell .shell > ul #shell-title #left-color-picker-container > div > svg {
-  min-height: 200px;
-  max-width: 200px;
-}
-#shell .shell > ul #shell-title #left-color-picker-container #l-star-1 {
-  grid-area: star-color;
-  min-height: 100px;
-  width: 100px;
 }
 #shell .shell > ul #shell-title #shell-svgs {
   display: grid;
@@ -1113,6 +1095,50 @@ footer > div ul li a:visited:active {
     line-height: 1.5625rem;
     padding: 0px 16px 16px 16px;
   }
+}
+#shell #left-color-picker-container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-areas: "star-color-1";
+  grid-template-columns: auto;
+}
+@media (min-width: 768px) {
+  #shell #left-color-picker-container {
+    grid-template-areas: ". s1 s2 s3" "s4 s5 s6 .";
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+#shell #left-color-picker-container #left-color-picker {
+  grid-area: star-color-1;
+  width: 100%;
+  height: 100%;
+}
+#shell #left-color-picker-container #left-color-picker .color-star-container {
+  height: 100%;
+  width: 100%;
+}
+#shell #left-color-picker-container #left-color-picker .color-star-container .color-star {
+  width: 50%;
+}
+#shell #l-star-1 {
+  grid-area: s1;
+}
+#shell #l-star-2 {
+  grid-area: s2;
+}
+#shell #l-star-3 {
+  grid-area: s3;
+}
+#shell #l-star-4 {
+  grid-area: s4;
+}
+#shell #l-star-5 {
+  grid-area: s5;
+}
+#shell #l-star-6 {
+  grid-area: s6;
 }
 
 /* =============
