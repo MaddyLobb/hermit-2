@@ -1,5 +1,5 @@
 //import { gsap } from "gsap";
-//import { waveColorTL } from "./waveColor";
+import { waveColorTL } from "./waveColor";
 import { buidPickerOptions } from "./colorPicker";
 
 buidPickerOptions();
@@ -11,13 +11,13 @@ function switchTheme(e){
 
     if (e.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme',dark);
-        ///waveColorTL.play();
+        localStorage.setItem('theme', 'dark');
+       // waveColorTL.play();
     }
 
     else{
         document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme',light); 
+        localStorage.setItem('theme','light'); 
         //waveColorTL.reverse();
     }
     
@@ -26,14 +26,28 @@ function switchTheme(e){
 
 }
 
-toggleSwitch.addEventListener('change', switchTheme, false);
+function waveColor(e){
 
-const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') :null;
+    if(e.target.checked){
+        console.log("here");
+        waveColorTL.play();
+    }
 
-if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
-
-    if (currentTheme === 'dark'){
-        toggleSwitch.checked = true;
+    else{
+        waveColorTL.reverse();
     }
 }
+toggleSwitch.addEventListener('change', waveColor, true);
+toggleSwitch.addEventListener('change', switchTheme, false);
+
+//? localStorage.getItem('theme') :null
+
+// const currentTheme = localStorage.getItem('theme');
+
+// if (currentTheme) {
+//     document.documentElement.setAttribute('data-theme', currentTheme);
+
+//     if (currentTheme === 'dark'){
+//         toggleSwitch.checked = true;
+//     }
+// }

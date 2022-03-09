@@ -988,7 +988,7 @@ footer > div ul li a:visited:active {
   z-index: 2;
 }
 #shell .shell {
-  background-color: #C26B7A;
+  background-color: var(--pink);
   height: 100%;
   width: 100%;
   display: flex;
