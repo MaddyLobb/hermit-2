@@ -1101,21 +1101,11 @@ footer > div ul li a:visited:active {
   margin-top: -15vh;
   display: flex;
 }
-#shell .shell > ul #shell-svgs #shells #shell1 {
-  display: none;
+#shell .shell > ul #shell-svgs #shells #main-shell-left {
+  position: relative;
 }
-@media (min-width: 768px) {
-  #shell .shell > ul #shell-svgs #shells #shell1 {
-    display: list-item;
-  }
-}
-#shell .shell > ul #shell-svgs #shells #shell3 {
-  display: none;
-}
-@media (min-width: 768px) {
-  #shell .shell > ul #shell-svgs #shells #shell3 {
-    display: list-item;
-  }
+#shell .shell > ul #shell-svgs #shells #main-shell-right {
+  position: relative;
 }
 #shell .shell > ul #shell-p p {
   font-size: 1rem;
@@ -1133,6 +1123,7 @@ footer > div ul li a:visited:active {
 #shell .color-svg-li {
   max-height: 76px;
   max-width: 76px;
+  cursor: pointer;
 }
 #shell .color-svg {
   max-height: 76px;

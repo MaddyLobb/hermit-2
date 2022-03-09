@@ -141,21 +141,28 @@
 
                     display: flex;
 
-                    #shell1{
-                        display: none;
-
-                        @include md{
-                            display: list-item;
-                        }
+                    #main-shell-left{
+                        position: relative;
+                    }
+                    #main-shell-right{
+                        position: relative;
                     }
 
-                    #shell3{
-                        display: none;
+                    // #shell1{
+                    //     display: none;
 
-                        @include md{
-                            display: list-item;
-                        }
-                    }
+                    //     @include md{
+                    //         display: list-item;
+                    //     }
+                    // }
+
+                    // #shell3{
+                    //     display: none;
+
+                    //     @include md{
+                    //         display: list-item;
+                    //     }
+                    // }
 
                 }
             
@@ -183,7 +190,8 @@
     .color-svg-li{
         max-height: 76px;
         max-width: 76px;
-        //grid-area: color-picker;
+        cursor: pointer;
+
     }
     
     .color-svg{
