@@ -1026,6 +1026,7 @@ footer > div ul li a:visited:active {
   }
 }
 #shell .shell > ul #shell-title {
+  grid-area: shell-title;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1049,7 +1050,22 @@ footer > div ul li a:visited:active {
     font-size: 1.5rem;
   }
 }
+#shell .shell > ul #shell-svg-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  #shell .shell > ul #shell-svg-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-areas: "color-left hermit color-right";
+  }
+}
 #shell .shell > ul #shell-svgs {
+  grid-area: hermit;
   display: grid;
   grid-template-areas: "shell";
   grid-template-columns: auto;
@@ -1110,21 +1126,182 @@ footer > div ul li a:visited:active {
   }
 }
 #shell #color-picker-container {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
   display: grid;
   grid-template-columns: auto;
   grid-template-areas: ". color-picker .";
 }
-#shell #color-picker-container #color-picker {
+#shell #color-picker-container #color-picker .color-svg-li {
+  max-height: 76px;
+  max-width: 76px;
   grid-area: color-picker;
+}
+#shell #color-picker-container #color-picker #left-color-picker {
+  grid-area: color-left;
   height: 100%;
   width: 100%;
+  max-height: 76px;
+  max-width: 76px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#shell #color-picker-container #color-picker .color-svg {
-  height: 76px;
+@media (min-width: 768px) {
+  #shell #color-picker-container #color-picker #left-color-picker {
+    grid-area: color-left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+#shell #color-picker-container #color-picker #left-color-picker #l-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#shell #color-picker-container #color-picker #left-color-picker #l-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#shell #color-picker-container #color-picker #right-color-picker {
+  grid-area: color-right;
+  max-height: 76px;
+  max-width: 76px;
+}
+@media (min-width: 768px) {
+  #shell #color-picker-container #color-picker #right-color-picker {
+    grid-area: color-right;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas: "s7 s8 s9" "s10 s11 s12";
+    gap: 20px;
+  }
+}
+#shell #s-1 {
+  grid-area: s1;
+  min-height: 76px;
+  min-width: 76px;
+}
+#shell #s-2 {
+  grid-area: s2;
+  display: none;
+}
+@media (min-width: 768px) {
+  #shell #s-2 {
+    display: list-item;
+    min-height: 76px;
+    min-width: 76px;
+  }
+}
+#shell #s-3 {
+  grid-area: s3;
+  display: none;
+}
+@media (min-width: 768px) {
+  #shell #s-3 {
+    display: list-item;
+    min-height: 76px;
+    min-width: 76px;
+  }
+}
+#shell #s-4 {
+  grid-area: s4;
+  display: none;
+}
+@media (min-width: 768px) {
+  #shell #s-4 {
+    display: list-item;
+    min-height: 76px;
+    min-width: 76px;
+  }
+}
+#shell #s-5 {
+  grid-area: s5;
+  display: none;
+}
+@media (min-width: 768px) {
+  #shell #s-5 {
+    display: list-item;
+    min-height: 76px;
+    min-width: 76px;
+  }
+}
+#shell #s-6 {
+  grid-area: s6;
+  display: none;
+}
+@media (min-width: 768px) {
+  #shell #s-6 {
+    display: list-item;
+  }
+}
+#shell #s-7 {
+  grid-area: s7;
+  display: none;
+}
+@media (min-width: 768px) {
+  #shell #s-7 {
+    display: list-item;
+    min-height: 76px;
+    min-width: 76px;
+  }
+}
+#shell #s-8 {
+  grid-area: s8;
+  display: none;
+}
+@media (min-width: 768px) {
+  #shell #s-8 {
+    display: list-item;
+    min-height: 76px;
+    min-width: 76px;
+  }
+}
+#shell #s-9 {
+  grid-area: s9;
+  display: none;
+}
+@media (min-width: 768px) {
+  #shell #s-9 {
+    display: list-item;
+    min-height: 76px;
+    min-width: 76px;
+  }
+}
+#shell #s-10 {
+  grid-area: s10;
+  display: none;
+}
+@media (min-width: 768px) {
+  #shell #s-10 {
+    display: list-item;
+    min-height: 76px;
+    min-width: 76px;
+  }
+}
+#shell #s-11 {
+  grid-area: s11;
+  display: none;
+}
+@media (min-width: 768px) {
+  #shell #s-11 {
+    display: list-item;
+    min-height: 76px;
+    min-width: 76px;
+  }
+}
+#shell #s-12 {
+  grid-area: s12;
+  display: none;
+}
+@media (min-width: 768px) {
+  #shell #s-12 {
+    display: list-item;
+    min-height: 76px;
+    min-width: 76px;
+  }
 }
 
 /* =============
