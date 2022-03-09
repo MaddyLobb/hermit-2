@@ -1,5 +1,8 @@
 //import { gsap } from "gsap";
 //import { waveColorTL } from "./waveColor";
+import { buidPickerOptions } from "./colorPicker";
+
+buidPickerOptions();
 
 //Darkmode//
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');

@@ -978,6 +978,9 @@ footer > div ul li a:visited:active {
 /* =============
     Shell
 ============= */
+/* =============
+    Shell
+============= */
 #shell {
   height: 100%;
   width: 100vw;
@@ -1061,7 +1064,9 @@ footer > div ul li a:visited:active {
   #shell .shell > ul #shell-svg-container {
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-template-areas: "color-left hermit color-right";
+    grid-template-areas: ". hermit ." "color-left-top hermit color-right-top" "color-left-bottom hermit color-right-bottom" ". hermit .";
+    grid-template-rows: repeat(4, 1fr);
+    row-gap: 5px;
   }
 }
 #shell .shell > ul #shell-svgs {
@@ -1125,56 +1130,42 @@ footer > div ul li a:visited:active {
     padding: 0px 16px 16px 16px;
   }
 }
-#shell #color-picker-container {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-areas: ". color-picker .";
-}
-#shell #color-picker-container #color-picker .color-svg-li {
+#shell .color-svg-li {
   max-height: 76px;
   max-width: 76px;
-  grid-area: color-picker;
 }
-#shell #color-picker-container #color-picker #left-color-picker {
-  grid-area: color-left;
-  height: 100%;
+#shell .color-svg {
+  max-height: 76px;
+  max-width: 76px;
+}
+#shell #l-top {
   width: 100%;
-  max-height: 76px;
-  max-width: 76px;
-}
-@media (min-width: 768px) {
-  #shell #color-picker-container #color-picker #left-color-picker {
-    grid-area: color-left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-#shell #color-picker-container #color-picker #left-color-picker #l-top {
+  grid-area: color-left-top;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  column-gap: 5px;
 }
-#shell #color-picker-container #color-picker #left-color-picker #l-bottom {
+#shell #l-bottom {
+  grid-area: color-left-bottom;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  column-gap: 5px;
 }
-#shell #color-picker-container #color-picker #right-color-picker {
-  grid-area: color-right;
-  max-height: 76px;
-  max-width: 76px;
+#shell #r-top {
+  grid-area: color-right-top;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5px;
 }
-@media (min-width: 768px) {
-  #shell #color-picker-container #color-picker #right-color-picker {
-    grid-area: color-right;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-areas: "s7 s8 s9" "s10 s11 s12";
-    gap: 20px;
-  }
+#shell #r-bottom {
+  grid-area: color-right-bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5px;
 }
 #shell #s-1 {
   grid-area: s1;
@@ -1232,6 +1223,8 @@ footer > div ul li a:visited:active {
 @media (min-width: 768px) {
   #shell #s-6 {
     display: list-item;
+    min-height: 76px;
+    min-width: 76px;
   }
 }
 #shell #s-7 {
