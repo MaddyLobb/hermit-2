@@ -989,7 +989,7 @@ footer > div ul li a:visited:active {
   z-index: 2;
 }
 #shell .shell {
-  background-color: var(--pink);
+  background-color: #C26B7A;
   height: 100%;
   width: 100%;
   display: flex;
@@ -1009,6 +1009,10 @@ footer > div ul li a:visited:active {
   max-width: 1200px;
   margin: 50px 20px;
   padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 @media (min-width: 768px) {
   #shell .shell > ul {
@@ -1045,100 +1049,82 @@ footer > div ul li a:visited:active {
     font-size: 1.5rem;
   }
 }
-#shell .shell > ul #shell-title #shell-svgs {
+#shell .shell > ul #shell-svgs {
   display: grid;
   grid-template-areas: "shell";
   grid-template-columns: auto;
   padding-top: 10vh;
 }
-#shell .shell > ul #shell-title #shell-svgs > div > svg {
+#shell .shell > ul #shell-svgs > div > svg {
   width: 300px;
 }
 @media (min-width: 768px) {
-  #shell .shell > ul #shell-title #shell-svgs > div > svg {
-    min-width: 200px;
-    min-height: 200px;
+  #shell .shell > ul #shell-svgs > div > svg {
+    width: 200px;
   }
 }
 @media (min-width: 992px) {
-  #shell .shell > ul #shell-title #shell-svgs > div > svg {
+  #shell .shell > ul #shell-svgs > div > svg {
     width: 300px;
   }
 }
-#shell .shell > ul #shell-title #shell-svgs #crab-body {
+#shell .shell > ul #shell-svgs #crab-body {
   grid-area: shell;
   z-index: 2;
   display: flex;
   justify-content: center;
 }
-#shell .shell > ul #shell-title #shell-svgs #shells {
+#shell .shell > ul #shell-svgs #shells {
   grid-area: shell;
   z-index: 1;
   margin-top: -15vh;
   display: flex;
-  min-width: 200px;
-  min-height: 200px;
 }
-#shell .shell > ul #shell-title #shell2 {
-  min-width: 200px;
-  min-height: 200px;
+#shell .shell > ul #shell-svgs #shells #shell1 {
+  display: none;
 }
-#shell .shell > ul #shell-title #shell-p p {
+@media (min-width: 768px) {
+  #shell .shell > ul #shell-svgs #shells #shell1 {
+    display: list-item;
+  }
+}
+#shell .shell > ul #shell-svgs #shells #shell3 {
+  display: none;
+}
+@media (min-width: 768px) {
+  #shell .shell > ul #shell-svgs #shells #shell3 {
+    display: list-item;
+  }
+}
+#shell .shell > ul #shell-p p {
   font-size: 1rem;
   line-height: 1.25rem;
   padding: 0px 10px 16px 10px;
   text-align: center;
 }
 @media (min-width: 768px) {
-  #shell .shell > ul #shell-title #shell-p p {
+  #shell .shell > ul #shell-p p {
     font-size: 1.125rem;
     line-height: 1.5625rem;
     padding: 0px 16px 16px 16px;
   }
 }
-#shell #left-color-picker-container {
+#shell #color-picker-container {
   height: 100%;
   width: 100%;
+  display: flex;
+  justify-content: center;
   display: grid;
-  grid-template-areas: "star-color-1";
   grid-template-columns: auto;
+  grid-template-areas: ". color-picker .";
 }
-@media (min-width: 768px) {
-  #shell #left-color-picker-container {
-    grid-template-areas: ". s1 s2 s3" "s4 s5 s6 .";
-    grid-template-columns: auto;
-    grid-template-rows: repeat(2, 1fr);
-  }
-}
-#shell #left-color-picker-container #left-color-picker {
-  grid-area: star-color-1;
-  width: 100%;
-  height: 100%;
-}
-#shell #left-color-picker-container #left-color-picker .color-star-container {
+#shell #color-picker-container #color-picker {
+  grid-area: color-picker;
   height: 100%;
   width: 100%;
 }
-#shell #left-color-picker-container #left-color-picker .color-star-container .color-star {
-  width: 50%;
-}
-#shell #l-star-1 {
-  grid-area: s1;
-}
-#shell #l-star-2 {
-  grid-area: s2;
-}
-#shell #l-star-3 {
-  grid-area: s3;
-}
-#shell #l-star-4 {
-  grid-area: s4;
-}
-#shell #l-star-5 {
-  grid-area: s5;
-}
-#shell #l-star-6 {
-  grid-area: s6;
+#shell #color-picker-container #color-picker .color-svg {
+  height: 76px;
 }
 
 /* =============
