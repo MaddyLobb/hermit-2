@@ -531,7 +531,7 @@ header #navigation-contain #navigation-header {
   grid-area: contain;
   display: grid;
   grid-template-areas: "survival search burger" ". nav nav";
-  grid-template-columns: 15% 65% 15% auto auto auto;
+  grid-template-columns: 20% 60% 20% auto auto auto;
   padding-left: 16px;
 }
 @media (min-width: 768px) {
@@ -549,19 +549,15 @@ header #navigation-contain #navigation-header {
 header #navigation-contain #navigation-header #logo-container {
   grid-area: survival;
 }
-@media (min-width: 992px) {
-  header #navigation-contain #navigation-header #light-dark {
-    grid-area: search;
-  }
-}
 header #navigation-contain #navigation-header .theme-switch-wrapper {
+  grid-area: search;
   display: flex;
   align-items: center;
   justify-content: center;
   justify-content: column;
   width: 100%;
 }
-header #navigation-contain #navigation-header .theme-switch-wrapper p {
+header #navigation-contain #navigation-header .theme-switch-wrapper #light-dark-text {
   margin-left: 10px;
   font-size: 1rem;
   color: white;
