@@ -1141,9 +1141,6 @@ footer > div ul li a:visited:active {
   width: 100%;
   max-height: 76px;
   max-width: 76px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 @media (min-width: 768px) {
   #shell #color-picker-container #color-picker #left-color-picker {

@@ -213,9 +213,7 @@
                 max-height: 76px;
                 max-width: 76px;
 
-                display: flex;
-                    justify-content: center;
-                    align-items: center;
+                
 
                 @include md{
                     grid-area: color-left;
