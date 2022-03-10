@@ -1,0 +1,1 @@
+import{gsap}from"gsap";export const waveTL=new gsap.timeline({paused:!0});waveTL.to("#tanWave-2",{duration:.05,fill:"#000"}).to("#orangeWave-2",{duration:.05,fill:"#000"}).to("#pinkWave-2",{duration:.05,fill:"#000"}).to("#purpleWave-2",{duration:.05,fill:"#000"}).to("#darkPurpleWave-2",{duration:.05,fill:"#000"});
