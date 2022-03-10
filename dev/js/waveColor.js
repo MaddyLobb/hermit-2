@@ -1,13 +1,24 @@
 import { gsap } from "gsap";
 
+// export function waveColorTL(){
+
+//     const waveColor = gsap.timeline();
+//     console.log("this is working")
+
+//     waveColor.to("#tanWave-2",{duration:0.05, fill:"000"});
+
+//     return waveColor;
+// }
+
 
 
 export const waveColorTL = new gsap.timeline({paused:true});
 
-
-
-const tanWaveTL = new gsap.timeline();
-tanWaveTL.to("#tanWave-2",{duration:0.05, fill:"000"});
+waveColorTL.to("#tanWave-2",{duration:0.05, fill:"000"})
+           .to("#orangeWave-2",{duration:0.05, fill:"000"})
+           .to("#pinkWave-2",{duration:0.05, fill:"000"})
+           .to("#purpleWave-2",{duration:0.05, fill:"000"})
+           .to("#darkPurpleWave-2",{duration:0.05, fill:"000"});
 
 // const orangeWaveTL = new gsap.timeline();
 // orangeWaveTL.to("#orangeWave",{duration:0.05, background:"#000", color:"000"});
@@ -20,12 +31,3 @@ tanWaveTL.to("#tanWave-2",{duration:0.05, fill:"000"});
 
 // const darkPurpleWaveTL = new gsap.timeline();
 // darkPurpleWaveTL.to("#darkPurpleWave",{duration:0.05, background:"#000", color:"000"});
-
-
-
-waveColorTL.add(tanWaveTL, "wave")
-            // .add(orangeWaveTL, "wave")
-            // .add(pinkWaveTL, "wave")
-            // .add(purpleWaveTL, "wave")
-            // .add(darkPurpleWaveTL, "wave")
-

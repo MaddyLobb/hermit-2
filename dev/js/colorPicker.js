@@ -16,7 +16,6 @@ export function leftPickerOptions(){
         button.addEventListener("click", () =>{
             // set the background color from the button that is clicked
             leftShell.style.fill = colorArrayLeft[i];
-            //rightShell.style.fill = colorArray[i];
         })
     });
 }
@@ -32,18 +31,3 @@ export function rightPickerOptions(){
         })
     });
 }
-
-// export function buidPickerOptions(){
-//     colorButtons.forEach((button,i) => {
-//         // set the background color of each button
-//         button.style.fill = colorArray[i];
-
-//         button.addEventListener("click", () =>{
-//             // set the background color from the button that is clicked
-//             leftShell.style.fill = colorArray[i];
-//             rightShell.style.fill = colorArray[i];
-//         })
-//     });
-// }
-
-//"#F366CC","#E7943B","#5D2397","#F58251","#A264D2","#FA8787"

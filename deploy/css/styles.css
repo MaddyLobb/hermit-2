@@ -846,9 +846,6 @@ footer > div ul li a:visited:active {
 /* =============
     Food
 ============= */
-/* =============
-    Food
-============= */
 #food {
   height: 100%;
   width: 100vw;
@@ -857,118 +854,6 @@ footer > div ul li a:visited:active {
 #food #orangeWave {
   width: 100%;
   margin-bottom: -15px;
-}
-#food .food {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  padding-bottom: 15%;
-  background-color: var(--lightpink);
-  display: grid;
-  grid-template-columns: 16px auto 16px;
-  grid-template-areas: ". food-text ." ". food-image .";
-  row-gap: 20px;
-}
-@media (min-width: 768px) {
-  #food .food {
-    grid-template-columns: auto 50%;
-    grid-template-areas: "food-image food-text";
-  }
-}
-#food .food > div {
-  grid-area: food-image;
-}
-#food .food > div ul {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-areas: "gallery-1";
-}
-@media (min-width: 768px) {
-  #food .food > div ul {
-    grid-template-columns: auto;
-    grid-template-rows: repeat(2, auto);
-    grid-template-areas: ". gallery-1" "gallery-2 gallery-1" "gallery-2 gallery-3" ". gallery-3";
-    gap: 10%;
-  }
-}
-#food .food > div ul li {
-  background-position: center;
-  background-size: cover;
-  border: solid white 3px;
-  border-radius: 10%;
-}
-#food .food > div ul #gallery-1 {
-  background-image: url("../img/HC1.jpg");
-  grid-area: gallery-1;
-  width: 150px;
-  height: 150px;
-}
-#food .food > div ul #gallery-2 {
-  background-image: url("../img/HC5.jpg");
-  grid-area: gallery-2;
-  width: 150px;
-  height: 150px;
-  display: none;
-}
-@media (min-width: 768px) {
-  #food .food > div ul #gallery-2 {
-    display: block;
-  }
-}
-#food .food > div ul #gallery-3 {
-  background-image: url("../img/HC2.jpg");
-  grid-area: gallery-3;
-  width: 150px;
-  height: 150px;
-  display: none;
-}
-@media (min-width: 768px) {
-  #food .food > div ul #gallery-3 {
-    display: block;
-  }
-}
-#food .food aside {
-  grid-area: food-text;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--purple);
-}
-#food .food aside div {
-  padding: 70px 15px;
-  border: 5px white solid;
-  border-radius: 80px;
-  text-align: center;
-}
-#food .food aside div h2 {
-  font-size: 1.625rem;
-}
-@media (min-width: 768px) {
-  #food .food aside div h2 {
-    font-size: 4rem;
-  }
-}
-#food .food aside div h3 {
-  margin: 25px 0px;
-  font-size: 1rem;
-}
-@media (min-width: 768px) {
-  #food .food aside div h3 {
-    margin: 55px 0px;
-    font-size: 1.5rem;
-  }
-}
-#food .food aside div p {
-  font-size: 1rem;
-  line-height: 1.25rem;
-  padding: 0px 10px 16px 10px;
-}
-@media (min-width: 768px) {
-  #food .food aside div p {
-    font-size: 1.125rem;
-    line-height: 1.5625rem;
-    padding: 0px 16px 16px 16px;
-  }
 }
 
 /* =============

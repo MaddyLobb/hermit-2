@@ -13,13 +13,15 @@ function switchTheme(e){
     if (e.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
-        waveColorTL.play();
+        //console.log(waveColorTL.checked+"wave play");
+       // waveColorTL.play();
     }
 
     else{
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme','light'); 
-        waveColorTL.reverse();
+        //console.log(waveColorTL.checked+"wave reverse");
+        //waveColorTL.reverse();
     }
     
     console.log(toggleSwitch.checked +'this is the value for the checkbox');
@@ -27,18 +29,21 @@ function switchTheme(e){
 
 }
 
-// function waveColor(e){
+console.log(waveColorTL.checked+"wave play");
 
-//     if(e.target.checked){
-//         console.log("here");
-//         waveColorTL.play();
-//     }
+function waves(e){
+    if (e.target.checked){
+        waveColorTL.play();
+    }
+    else{
+        waveColorTL.reverse(); 
+    }
 
-//     else{
-//         waveColorTL.reverse();
-//     }
-// }
-//toggleSwitch.addEventListener('change', waveColor, true);
+    console.log(toggleSwitch.checked +'this is the value for the waves');
+}
+
+toggleSwitch.addEventListener("change", waves, false);
+
 toggleSwitch.addEventListener('change', switchTheme, false);
 
 //? localStorage.getItem('theme') :null
