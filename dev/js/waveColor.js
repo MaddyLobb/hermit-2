@@ -7,7 +7,7 @@ export const waveColorTL = new gsap.timeline({paused:true});
 
 
 const tanWaveTL = new gsap.timeline();
-tanWaveTL.to("#tanWave2",{duration:0.05, fill:"000"});
+tanWaveTL.to("#tanWave-2",{duration:0.05, fill:"000"});
 
 // const orangeWaveTL = new gsap.timeline();
 // orangeWaveTL.to("#orangeWave",{duration:0.05, background:"#000", color:"000"});

@@ -1,8 +1,9 @@
 //import { gsap } from "gsap";
 import { waveColorTL } from "./waveColor";
-import { buidPickerOptions } from "./colorPicker";
+import { leftPickerOptions, rightPickerOptions } from "./colorPicker";
 
-buidPickerOptions();
+leftPickerOptions();
+rightPickerOptions();
 
 //Darkmode//
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
@@ -12,13 +13,13 @@ function switchTheme(e){
     if (e.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
-       // waveColorTL.play();
+        waveColorTL.play();
     }
 
     else{
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme','light'); 
-        //waveColorTL.reverse();
+        waveColorTL.reverse();
     }
     
     console.log(toggleSwitch.checked +'this is the value for the checkbox');
@@ -26,18 +27,18 @@ function switchTheme(e){
 
 }
 
-function waveColor(e){
+// function waveColor(e){
 
-    if(e.target.checked){
-        console.log("here");
-        waveColorTL.play();
-    }
+//     if(e.target.checked){
+//         console.log("here");
+//         waveColorTL.play();
+//     }
 
-    else{
-        waveColorTL.reverse();
-    }
-}
-toggleSwitch.addEventListener('change', waveColor, true);
+//     else{
+//         waveColorTL.reverse();
+//     }
+// }
+//toggleSwitch.addEventListener('change', waveColor, true);
 toggleSwitch.addEventListener('change', switchTheme, false);
 
 //? localStorage.getItem('theme') :null

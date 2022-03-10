@@ -81,10 +81,11 @@
 
         #shell-svg-container{
             height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-areas: ". hermit ."
+                                 "color-left-top hermit color-right-top"
+                                 ". hermit .";
 
             @include md{
                 display: grid;
@@ -110,7 +111,7 @@
                 >div{
                     
                     >svg{
-                        width: 300px;
+                        width: 200px;
 
                         @include md{
                             width: 200px;
@@ -291,12 +292,14 @@
 
     #s-7{
         grid-area: s7;
-        display: none;
+        // display: none;
+        min-height: 76px;
+            min-width: 76px;
 
         @include md{
-            display: list-item;
-            min-height: 76px;
-            min-width: 76px;
+            // display: list-item;
+            // min-height: 76px;
+            // min-width: 76px;
         }
     }
 

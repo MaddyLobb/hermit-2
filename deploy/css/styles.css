@@ -1051,10 +1051,9 @@ footer > div ul li a:visited:active {
 }
 #shell .shell > ul #shell-svg-container {
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: ". hermit ." "color-left-top hermit color-right-top" ". hermit .";
 }
 @media (min-width: 768px) {
   #shell .shell > ul #shell-svg-container {
@@ -1073,7 +1072,7 @@ footer > div ul li a:visited:active {
   padding-top: 10vh;
 }
 #shell .shell > ul #shell-svgs > div > svg {
-  width: 300px;
+  width: 200px;
 }
 @media (min-width: 768px) {
   #shell .shell > ul #shell-svgs > div > svg {
@@ -1216,14 +1215,8 @@ footer > div ul li a:visited:active {
 }
 #shell #s-7 {
   grid-area: s7;
-  display: none;
-}
-@media (min-width: 768px) {
-  #shell #s-7 {
-    display: list-item;
-    min-height: 76px;
-    min-width: 76px;
-  }
+  min-height: 76px;
+  min-width: 76px;
 }
 #shell #s-8 {
   grid-area: s8;
