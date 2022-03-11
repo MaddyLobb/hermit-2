@@ -1,22 +1,9 @@
-//import { gsap } from "gsap";
-//import { gsap } from "gsap";
 import { waveTL } from "./waveColor";
 import { leftPickerOptions, rightPickerOptions } from "./colorPicker";
+//import { foodCarousel } from "./carousel";
 
 leftPickerOptions();
 rightPickerOptions();
-
-
-
-
-
-// const waveTL = new gsap.timeline({paused:true});
-
-// waveTL.to("#tanWave-2",{duration:0.05, fill:"#000"})
-//            .to("#orangeWave-2",{duration:0.05, fill:"000"})
-//            .to("#pinkWave-2",{duration:0.05, fill:"000"})
-//            .to("#purpleWave-2",{duration:0.05, fill:"000"})
-//            .to("#darkPurpleWave-2",{duration:0.05, fill:"000"});
 
 //Darkmode//
 const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
@@ -59,3 +46,25 @@ if (currentTheme) {
 }
 
 window.addEventListener('load',  waveTL);
+//window.addEventListener('load', foodCarousel);
+
+import { Fancybox } from "@fancyapps/ui";
+// import { Carousel } from "@fancyapps/ui";
+
+// const foodCarousel = new Carousel(document.querySelector(".carousel-1"), {
+//     'center': false,
+//     //slidesPerPage: 1,
+// });
+
+// // Customize Fancybox
+// Fancybox.bind('[data-fancybox="gallery"]', {
+//     Carousel: {
+//       on: {
+//         change: (that) => {
+//           foodCarousel.slideTo(foodCarousel.findPageForSlide(that.page), {
+//             friction: 0,
+//           });
+//         },
+//       },
+//     },
+//   });
