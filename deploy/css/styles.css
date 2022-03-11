@@ -1073,6 +1073,28 @@ footer > div ul li a:visited:active {
   }
 }
 
+.food-fancybox {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: transparent;
+}
+
+.fancybox__container {
+  --fancybox-bg: rgba(46, 24, 69, 0.85);
+}
+
+.fancybox__container .fancybox__content {
+  box-sizing: content-box;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 8px 23px rgba(0, 0, 0, 0.5);
+}
+
 /* =============
     Shell
 ============= */
@@ -1591,32 +1613,26 @@ footer > div ul li a:visited:active {
     display: block;
   }
 }
-#life .carousel-1 {
-  height: 100%;
-  width: 100%;
-}
-@media (min-width: 768px) {
-  #life .carousel-1 {
-    height: 750px;
-    width: 458px;
-  }
-}
-#life .carousel-1 .carousel__nav {
-  display: none;
-}
-#life .carousel-1 .carousel__slide {
+
+.life-fancybox {
+  height: 200px;
+  width: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0rem;
-  width: 100%;
-  height: 100%;
+  font-size: 1.25rem;
 }
-#life .carousel-1 .carousel__dots {
-  color: var(--white);
-  margin-top: 10px;
-  z-index: 20;
-  position: static;
+
+.fancybox__container {
+  --fancybox-bg: rgba(46, 24, 69, 0.85);
+}
+
+.fancybox__container .fancybox__content {
+  box-sizing: content-box;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 8px 23px rgba(0, 0, 0, 0.5);
 }
 
 /* =============

@@ -1,7 +1,6 @@
 import { waveTL } from "./waveColor";
 import { leftPickerOptions, rightPickerOptions } from "./colorPicker";
-//import { foodCarousel } from "./carousel";
-
+import { Fancybox } from "@fancyapps/ui";
 leftPickerOptions();
 rightPickerOptions();
 
@@ -48,7 +47,6 @@ if (currentTheme) {
 window.addEventListener('load',  waveTL);
 //window.addEventListener('load', foodCarousel);
 
-import { Fancybox } from "@fancyapps/ui";
 // import { Carousel } from "@fancyapps/ui";
 
 // const foodCarousel = new Carousel(document.querySelector(".carousel-1"), {
@@ -68,3 +66,26 @@ import { Fancybox } from "@fancyapps/ui";
 //       },
 //     },
 //   });
+
+
+Fancybox.bind('[data-fancybox="gallery-1"]', {
+    Thumbs: false,
+    Toolbar: false,
+  
+    Image: {
+      zoom: false,
+      click: false,
+      wheel: "slide",
+    },
+});
+
+// Fancybox.bind('[data-fancybox="gallery-2"]', {
+//     Thumbs: false,
+//     Toolbar: false,
+  
+//     Image: {
+//       zoom: false,
+//       click: false,
+//       wheel: "slide",
+//     },
+// });
