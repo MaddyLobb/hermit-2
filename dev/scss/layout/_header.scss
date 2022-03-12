@@ -3,145 +3,304 @@
 ============= */
 
 header {
-	background-color: var(--purple);
+
+
+
+
+
+	background-color: #722B4A;
 	left: 0;
 	// position: fixed;
 	top: 0;
 	width: 100%;
+	position: fixed;
+	z-index: 10;
 
-		#navigation-contain{
-			@include xl{
+	#circle-cover{
+		position: fixed;
+		
+		width: 110vw;
+		height: 100vh;
+		// width: 100px;
 
-				display: grid;
-			grid-template-areas: ". contain .";
-			grid-template-columns: auto 1200px auto;
+		overflow-x: hidden;
+		overflow-y: hidden;
+		z-index: 1;
+
+		@include lg{
+			display: none;
+
+		}
+		
+
+		
+		
+	
+
+		#circle-svg{
+
+			position:fixed;
+			top:0;
+			right:0;
+			width: 100%;
+			z-index: 1;
+
+			@include lg{
+				display: none;
+
 
 			}
 		
-		#navigation-header {
 
-			grid-area: contain;
-			display: grid;
-			grid-template-areas: "survival search burger"
-								 ". nav nav";
-			grid-template-columns: 20% 60% 20%
-			auto auto auto;
-			padding-left: 16px;
-			// padding-top: 32px;
 
-			@include md{
-				grid-template-columns: 10% auto 10%
-			}
-			
-			@include lg {
-				grid-template-areas: "survival nav search";
-				grid-template-columns: 10% auto 20%;
-				padding-right: 16px;
-			}
-			
-			#logo-container {
-				grid-area: survival;
-				
-			}
+			// left:24px;
 
-			.theme-switch-wrapper {
-				grid-area: search;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				justify-content: column;
+		}
 
-				width: 100%;
-			  
-				#light-dark-text {
-				  margin-left: 10px;
-				  font-size: 1rem;
-				  color: white;
-				  font-family: 'Open Sans', sans-serif;
-				}
-			}
-			
-			.theme-switch {
-				display: inline-block;
-				height: 34px;
-				position: relative;
-				width: 60px;
-			}
-			  
-			  .theme-switch input {
-				display:none;
-			}
-			  
-			  .slider {
-				background-color: var(--darkpurple);
-				bottom: 0;
-				cursor: pointer;
-				left: 0;
-				position: absolute;
-				right: 0;
-				top: 0;
-				transition: .4s;
-			}
-			  
-			  .slider:before {
-				background-color: var(--white);
-				bottom: 4px;
-				content: "";
-				height: 26px;
-				left: 4px;
-				position: absolute;
-				transition: .4s;
-				width: 26px;
-			}
-			  
-			  input:checked + .slider {
-				background-color: var(--white);
-			}
-			  
-			  input:checked + .slider:before {
-				transform: translateX(26px);
-				background-color: var(--darkpurple);
-			}
-			  
-			  .slider.round {
-				border-radius: 34px;
-			}
-			  
-			  .slider.round:before {
-				border-radius: 50%;
-			}
 
+		#circle-svg2{
+
+			position:fixed;
+			top:0;
+			right:0;
+			width: 100%;
+			z-index: 1;
 			
 
-			#burger-container {
-				grid-area: burger;
-				@include lg {
-					display: none !important;
-				}
-
-				i {
-					color: blue;
-					cursor: pointer;
-					font-size: rem-calc(50);
-				}
-
-			}
-
-			#nav-container {
+			@include lg{
 				display: none;
-				grid-area: nav;
-				padding: 20px 10px 10px;
-				
-				@include lg {
-					display: block !important;
+
+
+			}
+
+			// left:24px;
+
+		}
+
+		#circle-svg3{
+
+			position:fixed;
+			top:0;
+			right:0;
+			width: 100%;
+			z-index: 1;
+		
+			@include lg{
+				display: none;
+
+
+			}
+
+
+			// left:24px;
+
+		}
+
+
+	
+	}
+
+	section{
+
+		// left: 0;
+		// // position: fixed;
+		// top: 0;
+		// width: 100%;
+
+	#navigation-contain{
+		// @include xl{
+
+		// 	display: grid;
+		// grid-template-areas: ". contain .";
+		// grid-template-columns: auto 1200px auto;
+
+
+		// }
+
+
+
+
+	
+	#navigation-header {
+		// @include xl{
+		// 	grid-area: contain;
+
+		// }
+
+		
+		display: grid;
+		grid-template-areas: "survival search burger"
+            "nav nav nav";
+		grid-template-columns: 20% 60% 20%;
+		// padding-left: 16px;
+		// padding-top: 32px;
+		@include lg {
+			grid-template-areas: "survival nav search";
+			grid-template-columns: 10% auto 10%;
+			padding-right: 16px;
+		}
+		
+
+       
+		#logo-container {
+			grid-area: survival;
+
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			
+			
+
+				>a{
+					z-index: 4;
+					// width: 100px;
+					// z-index: 500;
+					transition: 0.25s;
+					// font-size: 200px;
+
+					
+
+					>svg{
+						z-index: 4;
+						width: 100px;
+						transition: 0.25s;
+						&:hover{
+						width: 120px;
+						}
+					}
+					
+	
 				}
 
-				a{
-					color: #fff;
-					font-family: Staatliches;
-					font-size: rem-calc(20);
-				}
+			
+
+			
+
+
+			
+
+			// @include xl{
+			// 	width: 100px;
+			// 	height: 100px;
+			// 	padding-left: 4vw;
+			// }
+
+		
+		}
+
+		.theme-switch-wrapper {
+			grid-area: search;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			justify-content: column;
+
+			width: 100%;
+		  
+			#light-dark-text {
+			  margin-left: 10px;
+			  font-size: 1rem;
+			  color: white;
+			  font-family: 'Open Sans', sans-serif;
 			}
 		}
+		
+		.theme-switch {
+			display: inline-block;
+			height: 34px;
+			position: relative;
+			width: 60px;
+		}
+		  
+		  .theme-switch input {
+			display:none;
+		}
+		  
+		  .slider {
+			background-color: var(--darkpurple);
+			bottom: 0;
+			cursor: pointer;
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+			transition: .4s;
+		}
+		  
+		  .slider:before {
+			background-color: var(--white);
+			bottom: 4px;
+			content: "";
+			height: 26px;
+			left: 4px;
+			position: absolute;
+			transition: .4s;
+			width: 26px;
+		}
+		  
+		  input:checked + .slider {
+			background-color: var(--white);
+		}
+		  
+		  input:checked + .slider:before {
+			transform: translateX(26px);
+			background-color: var(--darkpurple);
+		}
+		  
+		  .slider.round {
+			border-radius: 34px;
+		}
+		  
+		  .slider.round:before {
+			border-radius: 50%;
+		}
+	
+      
+      
+		#burger-container {
+			grid-area: burger;
+			z-index: 4;
+			width: 100px;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			@include lg {
+				display: none !important;
+			}
+			i {
+				color: blue;
+				cursor: pointer;
+				font-size: rem-calc(50);
+			}
+		}
+		#nav-container {
+			// background-color: $darkblue;
+			// display: none;
+			z-index: 3;
+			position: fixed;
+			width: 100vw;
+			height: 100vh;
+			grid-area: nav;
+			padding: 20px 10px 10px;
+			// display: grid;
+			// justify-content: center;
+			// align-items: center;
+				
+
+		
+
+			@include lg {
+				// background-color: $darkblue;
+				display: block !important;
+				position: static;
+				height: 32px;
+				width: 20vw;
+			}
+
+			
+		}
+	}
+
+}
 	}
 }
