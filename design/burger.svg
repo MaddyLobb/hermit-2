@@ -1,0 +1,7 @@
+<svg width="173" height="147" viewBox="0 0 173 147" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="burger">
+<path id="top" d="M10.5968 34.3418H155.058L10.5968 122.595" stroke="black" stroke-width="5" stroke-linejoin="round"/>
+<path id="bottom" d="M10.5968 122.594H155.058L10.5968 34.3409" stroke="black" stroke-width="5" stroke-linejoin="round"/>
+<path id="middle" d="M10.5968 78.4678H155.058" stroke="black" stroke-width="5" stroke-linejoin="round"/>
+</g>
+</svg>
