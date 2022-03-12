@@ -6,10 +6,18 @@
     height: 100%;
     width: 100%;
 
+    margin-top: 60px;
+
+    @include md{
+        
+    margin-top: 100px;
+    }
+
     #hero-svg{
         height: 50%;
         width: 50%;
         float: right;
+        padding-right: 40px;
 
         @include md{
             padding-right: 40px;

@@ -10,8 +10,12 @@ ul {
     margin: 0;
     padding: 0;
 
-    li {
+    li{
         list-style: none;
+    }
+
+    .bullets {
+       list-style: inside;
     }
 }
 
@@ -28,4 +32,8 @@ ul {
     >div {
         grid-area: grid-content;
     }
+}
+
+body{
+    overflow-x: hidden;
 }

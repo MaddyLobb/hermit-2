@@ -382,6 +382,9 @@ ul {
 ul li {
   list-style: none;
 }
+ul .bullets {
+  list-style: inside;
+}
 
 .container-grid {
   display: grid;
@@ -396,6 +399,10 @@ ul li {
 }
 .container-grid > div {
   grid-area: grid-content;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /* =============
@@ -522,10 +529,12 @@ textarea {
   border-radius: 100px;
   text-align: center;
   font-family: Staatliches;
+  font-size: 1rem;
 }
 @media (min-width: 992px) {
   #nav-container ul li .nav-btns {
     width: 10vw;
+    font-size: 1.25rem;
   }
 }
 #nav-container ul li .nav-btns:hover {
@@ -799,11 +808,18 @@ footer > div ul li a:visited:active {
 #hero-2 {
   height: 100%;
   width: 100%;
+  margin-top: 60px;
+}
+@media (min-width: 768px) {
+  #hero-2 {
+    margin-top: 100px;
+  }
 }
 #hero-2 #hero-svg {
   height: 50%;
   width: 50%;
   float: right;
+  padding-right: 40px;
 }
 @media (min-width: 768px) {
   #hero-2 #hero-svg {
@@ -894,7 +910,6 @@ footer > div ul li a:visited:active {
   padding: 30px 15px;
   border: 5px white solid;
   border-radius: 80px;
-  text-align: center;
   color: var(--darkpurple);
 }
 @media (min-width: 768px) {
@@ -912,23 +927,16 @@ footer > div ul li a:visited:active {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
 }
 #intro #intro-content #intro-text #intro-title h2 {
   font-size: 1.625rem;
+  margin: 10px 0px;
 }
 @media (min-width: 768px) {
   #intro #intro-content #intro-text #intro-title h2 {
     font-size: 4rem;
-  }
-}
-#intro #intro-content #intro-text #intro-title h3 {
-  margin: 10px 0px;
-  font-size: 1rem;
-}
-@media (min-width: 768px) {
-  #intro #intro-content #intro-text #intro-title h3 {
     margin: 55px 0px;
-    font-size: 1.5rem;
   }
 }
 #intro #intro-content #intro-text #intro-p {
@@ -940,6 +948,7 @@ footer > div ul li a:visited:active {
 #intro #intro-content #intro-text #intro-p p {
   font-size: 1rem;
   line-height: 1.25rem;
+  font-weight: 700;
   padding: 0px 10px 16px 10px;
 }
 @media (min-width: 768px) {
@@ -949,8 +958,14 @@ footer > div ul li a:visited:active {
     padding: 0px 16px 16px 16px;
   }
 }
-#intro #intro-content #intro-illustration-container {
+#intro #intro-content #intro-text #intro-p #intro-list {
+  font-family: "Montserrat", sans-serif;
+  padding: 10px 16px 16px 16px;
+}
+#intro #intro-content #crab {
   grid-area: intro-svg;
+}
+#intro #intro-content #intro-illustration-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1046,7 +1061,6 @@ footer > div ul li a:visited:active {
   padding: 30px 15px;
   border: 5px white solid;
   border-radius: 80px;
-  text-align: center;
   color: var(--purple);
 }
 @media (min-width: 768px) {
@@ -1067,20 +1081,12 @@ footer > div ul li a:visited:active {
 }
 #food #food-content-conainter #food-text #food-title h2 {
   font-size: 1.625rem;
+  margin: 10px 0px;
 }
 @media (min-width: 768px) {
   #food #food-content-conainter #food-text #food-title h2 {
     font-size: 4rem;
-  }
-}
-#food #food-content-conainter #food-text #food-title h3 {
-  margin: 10px 0px;
-  font-size: 1rem;
-}
-@media (min-width: 768px) {
-  #food #food-content-conainter #food-text #food-title h3 {
     margin: 55px 0px;
-    font-size: 1.5rem;
   }
 }
 #food #food-content-conainter #food-text #food-p {
@@ -1093,6 +1099,7 @@ footer > div ul li a:visited:active {
   font-size: 1rem;
   line-height: 1.25rem;
   padding: 0px 10px 16px 10px;
+  font-weight: 700;
 }
 @media (min-width: 768px) {
   #food #food-content-conainter #food-text #food-p p {
@@ -1100,6 +1107,10 @@ footer > div ul li a:visited:active {
     line-height: 1.5625rem;
     padding: 0px 16px 16px 16px;
   }
+}
+#food #food-content-conainter #food-text #food-p #food-list {
+  font-family: "Montserrat", sans-serif;
+  padding: 10px 16px 16px 16px;
 }
 #food #food-content-conainter #food-image-container {
   grid-area: food-image;
@@ -1276,6 +1287,7 @@ footer > div ul li a:visited:active {
     display: grid;
     grid-template-areas: ". contain .";
     grid-template-columns: auto 1200px auto;
+    padding-top: 20px;
   }
 }
 #shell .shell #shell-content-container {
@@ -1386,7 +1398,8 @@ footer > div ul li a:visited:active {
   font-size: 1rem;
   line-height: 1.25rem;
   padding: 0px 10px 16px 10px;
-  text-align: center;
+  text-align: left;
+  font-weight: 700;
 }
 @media (min-width: 768px) {
   #shell .shell #shell-content-container #shell-p p {
@@ -1394,6 +1407,10 @@ footer > div ul li a:visited:active {
     line-height: 1.5625rem;
     padding: 0px 16px 16px 16px;
   }
+}
+#shell .shell #shell-content-container .bullets {
+  font-family: "Montserrat", sans-serif;
+  padding: 0px 16px 5px 16px;
 }
 #shell .color-svg-li {
   max-height: 76px;
@@ -1564,7 +1581,7 @@ footer > div ul li a:visited:active {
 }
 @media (min-width: 1200px) {
   #life {
-    margin-top: -180px;
+    margin-top: -185px;
   }
 }
 #life #purpleWave {
@@ -1620,7 +1637,6 @@ footer > div ul li a:visited:active {
   padding: 30px 15px;
   border: 5px white solid;
   border-radius: 80px;
-  text-align: center;
   color: var(--lightpink);
 }
 @media (min-width: 768px) {
@@ -1641,20 +1657,12 @@ footer > div ul li a:visited:active {
 }
 #life #life-content #life-text #life-title h2 {
   font-size: 1.625rem;
+  margin: 10px 0px;
 }
 @media (min-width: 768px) {
   #life #life-content #life-text #life-title h2 {
     font-size: 4rem;
-  }
-}
-#life #life-content #life-text #life-title h3 {
-  margin: 10px 0px;
-  font-size: 1rem;
-}
-@media (min-width: 768px) {
-  #life #life-content #life-text #life-title h3 {
     margin: 55px 0px;
-    font-size: 1.5rem;
   }
 }
 #life #life-content #life-text #life-p {
@@ -1667,6 +1675,7 @@ footer > div ul li a:visited:active {
   font-size: 1rem;
   line-height: 1.25rem;
   padding: 0px 10px 16px 10px;
+  font-weight: 700;
 }
 @media (min-width: 768px) {
   #life #life-content #life-text #life-p p {
@@ -1674,6 +1683,10 @@ footer > div ul li a:visited:active {
     line-height: 1.5625rem;
     padding: 0px 16px 16px 16px;
   }
+}
+#life #life-content #life-text #life-p .bullets {
+  font-family: "Montserrat", sans-serif;
+  padding: 0px 16px 5px 16px;
 }
 #life #life-content #life-image-container {
   grid-area: life-image;
@@ -1842,7 +1855,6 @@ footer > div ul li a:visited:active {
   padding: 30px 15px;
   border: 5px white solid;
   border-radius: 80px;
-  text-align: center;
   color: var(--tan);
 }
 @media (min-width: 768px) {
@@ -1860,23 +1872,16 @@ footer > div ul li a:visited:active {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
 }
 #end #end-content #end-text #end-title h2 {
   font-size: 1.625rem;
+  margin: 10px 0px;
 }
 @media (min-width: 768px) {
   #end #end-content #end-text #end-title h2 {
     font-size: 4rem;
-  }
-}
-#end #end-content #end-text #end-title h3 {
-  margin: 10px 0px;
-  font-size: 1rem;
-}
-@media (min-width: 768px) {
-  #end #end-content #end-text #end-title h3 {
     margin: 55px 0px;
-    font-size: 1.5rem;
   }
 }
 #end #end-content #end-text #end-p {
@@ -1889,6 +1894,7 @@ footer > div ul li a:visited:active {
   font-size: 1rem;
   line-height: 1.25rem;
   padding: 0px 10px 16px 10px;
+  font-weight: 700;
 }
 @media (min-width: 768px) {
   #end #end-content #end-text #end-p p {
@@ -1896,6 +1902,10 @@ footer > div ul li a:visited:active {
     line-height: 1.5625rem;
     padding: 0px 16px 16px 16px;
   }
+}
+#end #end-content #end-text #end-p .bullets {
+  font-family: "Montserrat", sans-serif;
+  padding: 0px 20px 5px 16px;
 }
 #end #end-content #end-illustration-container {
   grid-area: end-svg;

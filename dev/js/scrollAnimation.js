@@ -31,8 +31,8 @@ export function photoTrigger(){
     end: "bottom center",
     trigger: "#crab",
     toggleActions: "restart none resume none",
-    scrub: true,
-    markers: true
+    scrub: true
+    // markers: true
     }
 
   });
@@ -54,8 +54,8 @@ export function photoTrigger0(){
     end: "bottom center",
     trigger: ".moving1",
     toggleActions: "restart none resume none",
-    scrub: true,
-    markers: true
+    scrub: true
+    // markers: true
     }
 
   });
@@ -73,8 +73,8 @@ export function photoTrigger1(){
     end: "bottom 20%",
     trigger: "#tanWave",
     toggleActions: "restart none resume none",
-    scrub: true,
-    markers: true
+    scrub: true
+    // markers: true
     }
 
   });
@@ -90,8 +90,8 @@ export function photoTrigger2(){
     end: "bottom 20%",
     trigger: "#orangeWave-2",
     toggleActions: "restart none resume none",
-    scrub: true,
-    markers: true
+    scrub: true
+    // markers: true
     }
 
   });
@@ -107,8 +107,8 @@ export function photoTrigger3(){
     end: "bottom 20%",
     trigger: "#pinkWave",
     toggleActions: "restart none resume none",
-    scrub: true,
-    markers: true
+    scrub: true
+    // markers: true
     }
 
   });
@@ -124,8 +124,8 @@ export function photoTrigger4(){
     end: "bottom 20%",
     trigger: "#purpleWave",
     toggleActions: "restart none resume none",
-    scrub: true,
-    markers: true
+    scrub: true
+    // markers: true
     }
 
   });
@@ -141,8 +141,8 @@ export function photoTrigger5(){
     end: "bottom 20%",
     trigger: "#darkPurpleWave",
     toggleActions: "restart none resume none",
-    scrub: true,
-    markers: true
+    scrub: true
+    // markers: true
     }
 
   });
@@ -162,8 +162,8 @@ export function photoTrigger6(){
     end: "bottom center",
     trigger: "#closing-illustrations",
     toggleActions: "restart none resume none",
-    scrub: true,
-    markers: true
+    scrub: true
+    // markers: true
     }
 
   });
@@ -185,8 +185,8 @@ export function photoTrigger7(){
     end: "bottom 40%",
     trigger: ".food-svg",
     toggleActions: "restart none resume none",
-    scrub: true,
-    markers: true
+    scrub: true
+    // markers: true
     }
 
   });
@@ -208,8 +208,8 @@ export function photoTrigger8(){
     end: "bottom 40%",
     trigger: "#tan-star-2",
     toggleActions: "restart none resume none",
-    scrub: true,
-    markers: true
+    scrub: true
+    // markers: true
     }
 
   });
@@ -231,8 +231,8 @@ export function photoTrigger9(){
     end: "bottom 40%",
     trigger: "#tan-star-3",
     toggleActions: "restart none resume none",
-    scrub: true,
-    markers: true
+    scrub: true
+    // markers: true
     }
 
   });

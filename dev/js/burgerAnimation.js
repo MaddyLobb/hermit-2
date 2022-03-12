@@ -12,6 +12,7 @@ gsap.set("#circle-svg",{y: "-=170vh", scale: 4, alpha:0});
 gsap.set("#circle-svg2",{y: "-=170vh", scale: 4, alpha:0});
 gsap.set("#circle-svg3",{y: "-=170vh", scale: 4, alpha:0});
 gsap.set("#circle-top",{y: "-=100vh"});
+gsap.set("#circle-cover",{y: "-=170vh"});
     
 
 
@@ -33,9 +34,12 @@ gsap.set("#circle-top",{y: "-=100vh"});
 export const circleTL = new gsap.timeline({paused:true});
 circleTL.set(".circle-stagger", {alpha:1})
 
-circleTL.to("#circle-svg2", {duration:2, y: "+=200vh", scale: 4})
-circleTL.to("#circle-svg", {duration:1.4, y: "+=200vh", scale: 4}, "-=2")
-circleTL.to("#circle-svg3", {duration:1, y: "+=200vh", scale: 4}, "-=2")
+
+circleTL.to("#circle-cover", {duration:1, y: "+=170vh"}, "same")
+
+circleTL.to("#circle-svg2", {duration:2, y: "+=210vh", scale: 4}, "same")
+circleTL.to("#circle-svg", {duration:1.4, y: "+=210vh", scale: 4}, "-=2")
+circleTL.to("#circle-svg3", {duration:1, y: "+=210vh", scale: 4}, "-=2")
 // circleTL.to("#circle-cover", {duration: 2, color: '#E3BCBA'})
 
 // circleTL.to("#circle-top", {duration:2, y: "+=70vh", scale: 1.5});

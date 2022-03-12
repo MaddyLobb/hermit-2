@@ -66,7 +66,6 @@
             padding: 30px 15px;
             border: 5px white solid;
             border-radius: 80px;
-            text-align: center;
             color: var(--darkpurple);
         
 
@@ -83,23 +82,16 @@
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
+                text-align: center;
                 
                 h2{
 
                     font-size: rem-calc(26);
+                    margin: 10px 0px;
                 
                     @include md{
                         font-size: rem-calc(64); 
-                    }
-                }
-
-                h3{
-                    margin: 10px 0px;
-                    font-size: rem-calc(16);
-                    
-                    @include md{
                         margin: 55px 0px;
-                        font-size: rem-calc(24); 
                     }
                 }
             }
@@ -113,6 +105,7 @@
                 p{
                     font-size: rem-calc(16);
                     line-height: rem-calc(20);
+                    font-weight: 700;
                     padding: 0px 10px 16px 10px;
                     
                     @include md{
@@ -121,11 +114,18 @@
                         padding: 0px 16px 16px 16px;
                     }
                 }
+                #intro-list{
+                    font-family: 'Montserrat', sans-serif;
+                    padding: 10px 16px 16px 16px;
+    
+                }
             }
+        }
+        #crab{
+            grid-area: intro-svg;  
         }
 
         #intro-illustration-container{
-            grid-area: intro-svg;
 
             display: flex;
             justify-content: center;

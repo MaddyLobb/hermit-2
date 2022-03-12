@@ -59,11 +59,13 @@
 				border-radius: 100px;
 				text-align: center;
 				font-family: Staatliches;
+				font-size: rem-calc(16);
 				
 				
 				@include lg {
 					// color: $white;
 					width: 10vw;
+					font-size: rem-calc(20);
 				}
 				&:hover {
 					// color: red;

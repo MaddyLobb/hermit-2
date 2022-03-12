@@ -37,6 +37,7 @@
             display: grid;
 		    grid-template-areas: ". contain .";
 		    grid-template-columns: auto 1200px auto;
+            padding-top: 20px;
         }
 
     #shell-content-container{
@@ -173,7 +174,8 @@
                     font-size: rem-calc(16);
                     line-height: rem-calc(20);
                     padding: 0px 10px 16px 10px;
-                    text-align: center;
+                    text-align: left;
+                    font-weight: 700;
         
                     @include md{
                         font-size: rem-calc(18); 
@@ -181,6 +183,11 @@
                         padding: 0px 16px 16px 16px;
                     }
                 }
+            }
+
+            .bullets{
+                font-family: 'Montserrat', sans-serif;
+                padding: 0px 16px 5px 16px;
             }
         }
         
