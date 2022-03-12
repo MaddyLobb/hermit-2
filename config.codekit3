@@ -99,6 +99,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/deploy\/img\/hero.jpg" : {
+      "ft" : 16384,
+      "iS" : 295746,
+      "jF" : 0,
+      "oA" : 0,
+      "oAP" : "\/deploy\/img\/hero.jpg",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/deploy\/img\/intro_hermit.svg" : {
       "ft" : 2097152,
       "miP" : 0,

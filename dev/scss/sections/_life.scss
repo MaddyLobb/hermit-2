@@ -7,95 +7,121 @@
     width: 100vw;
     margin-top: -90px;
 
-    #purpleWave{
-        width: 100%;
-        margin-bottom: -10px;
+    @include xl{
+        margin-top: -180px; 
     }
 
-    #life-content-container{
-        height: 100%;
+    #purpleWave{
         width: 100%;
-        background-color: var(--purple);
-        padding-bottom: 25%;
-        @include md{
-            padding-bottom: 15%;
+        margin-bottom: -15px;
+    }
+    #life-content-cotainer{
+
+        @include xl{
+            grid-template-columns: auto 1200px auto;
+            grid-template-areas: ". food-contain .";
+        }
+
+
+        @include xl{
+            grid-template-columns: auto 4000px auto;
+            grid-template-areas: ". food-contain .";
         }
     }
 
     #life-content{
+        grid-area: food-contain;
+        height: 100%;
+        width: 100%;
+        background-color: var(--purple);
+
         display: grid;
         grid-template-columns: 16px auto 16px;
         grid-template-areas: ". life-text ."
-                             ". life-svg ."
-                            ". life-image .";
+                             ". life-image .";
+        row-gap: 30px;
+        padding-top: 5%;
+        padding-bottom: 25%;
 
         @include md{
-            grid-template-columns: 55% auto;
-            grid-template-areas: "life-text life-svg";
-                                //  ". life-svg";
-
-            column-gap: 20px;
+            grid-template-columns: auto 45% auto auto;
+            grid-template-areas: ". life-text . ."
+                                 ". life-text life-image ."
+                                 ". life-text . .";
+            padding-bottom: 15%;
+            column-gap: 30px;
         }
 
         @include lg{
-            padding-top: 0%;
+            grid-template-columns: auto 40% auto 4%;
+            grid-template-areas: ". life-text . ."
+                                 ". life-text life-image ."
+                                 ". life-text . .";
+        }
+
+        @include xl{
+            grid-template-columns: auto 600px 500px auto;
+            grid-template-areas: ". life-text . ."
+                                 ". life-text life-image."
+                                 ". life-text . .";
         }
 
 
-        #life-text-container{
+        #life-text{
             grid-area: life-text;
 
-            height: 100%;
-            width: 100%;
+            padding: 30px 15px;
+            border: 5px white solid;
+            border-radius: 80px;
+            text-align: center;
+            color: var(--lightpink);
+        
 
-            #life-text{
+            @include md{
+                max-width: 450px;
+            }
 
-                justify-content: center;
+            @include xl{
+                max-width: 550px;
+            }
+
+            #life-title{
+                display: flex;
                 align-items: center;
+                justify-content: center;
                 flex-direction: column;
-
-                padding: 50px 20px;
-                border: 5px white solid;
-                border-radius: 80px;
-                text-align: center;
-                color: var(--lightpink);
-
-                margin-top: 50px;
-
-                @include md{
-                    padding: 80px 30px;
-                    max-width: 450px;
-                    margin-left: 40px;
-
-                }
-
-                @include lg{
-                    max-width: 100%;
-                }
-
+                
                 h2{
-                    font-size: rem-calc(26);
 
+                    font-size: rem-calc(26);
+                
                     @include md{
                         font-size: rem-calc(64); 
                     }
                 }
 
                 h3{
-                    margin: 25px 0px;
+                    margin: 10px 0px;
                     font-size: rem-calc(16);
-
+                    
                     @include md{
                         margin: 55px 0px;
                         font-size: rem-calc(24); 
                     }
                 }
+            }
+
+            #life-p{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
 
                 p{
                     font-size: rem-calc(16);
                     line-height: rem-calc(20);
                     padding: 0px 10px 16px 10px;
-
+                    
                     @include md{
                         font-size: rem-calc(18); 
                         line-height: rem-calc(25);
@@ -103,127 +129,101 @@
                     }
                 }
             }
-
-        }
-    }
-
-    #life-image-container{
-        grid-area: life-image;
-        height: 100%;
-        width: 100%;
-
-        @include md{
-            padding-top: 0px;
-            margin-bottom:0px;
-            grid-area: life-svg;
         }
 
-        ul{
-            width: 100%;
-            height: 150px;
+        #life-image-container{
+            grid-area: life-image;
 
             display: flex;
             justify-content: center;
             align-items: center;
-            justify-content: space-evenly;
 
-            @include md{
-                flex-direction: column;
-                justify-content: center;
-                height: 100%;
-            }
+            height: 100%;
+            width: 100%;
 
-            li{
+            #life-image-ul{
                 height: 100%;
                 width: 100%;
 
-                background-position: center;
-                background-size: cover; 
-                border: 5px white solid;
-                border-radius: 20px;
-                height: 150px;
-                width: 150px;
-                
+                display: grid;
+                grid-template-columns: auto 200px auto;
+                grid-template-areas:". life-image-1 .";
+
+                @include md{
+                    display: grid;
+                    grid-template-columns: auto 200px auto ;
+                    grid-template-areas: ". life-image-1 ."
+                                         ". life-image-2 .";
+                    row-gap: 10px;
+                }
             }
+
         }
 
     }
 
-    #life-image-1{
-        background-image: url("../img/HC3.jpg");
-
-        @include md{
-            display: block;
-
-        }
-    }
-
-    #life-image-2{
-        background-image: url("../img/HC4.jpg");
-        display: none;
-
-        @include lg{
-            display: block;
-            margin-top: 30px;
-        }
-    }
-
-    #life-illustration-container{
-        grid-area: life-svg;
-
-        height: 100px;
-        width: 100%;
-
-        display: flex;
-        justify-content: center;
-
-        @include md{
-            height: 700px;
-            position: absolute;
-            justify-content:right;
-            align-items: center;
-        }
-
-        #life-illustrations{
-            width: 80%;
-
-             @include md{
-                width: 35%;
-                margin-right: 40px;
-            }
-             
-        }
     
-    }
-    #tan-star-1{
+}
+.life-svg{
+    height: 100%;
+    width: 100%;
 
-        @include md{
-            display: none;
+}
 
-        }
+#tan-star-top{
+    grid-area: life-image-1;
+    margin-top: -30px;
+    margin-left: 150px;
 
-        @include lg{
-            display: block;
-        }
-    }
+    height: 100px;
+    width: 100px;
 
-    #tan-star-2{
-        display: none;
-
-        @include md{
-            display: block;
-        }
-    }
-
-    #tan-star-3{
-        display: none;
-
-        @include md{
-            display: block;
-        }
+    @include md{
+        height: 150px;
+        width: 150px;
+        margin-top: -50px;
+        margin-left: 110px;
     }
 }
 
+#tan-star-bottom{
+    grid-area: life-image-2;
+    display: none;
+
+    @include md{
+        display: list-item;
+
+        height: 150px;
+        width: 150px;
+        margin-top: 130px;
+        margin-left: -45px;
+    }
+
+}
+
+.life-image{
+    background-position: center;
+    background-size: cover; 
+    border: solid white 5px;
+    border-radius: 10%;
+    height: 200px; 
+    width: 200px;
+}
+
+#life-image-1{
+    grid-area: life-image-1;
+    background-image: url("../img/HC3.jpg"); 
+}
+
+#life-image-2{
+    grid-area: life-image-2;
+    background-image: url("../img/HC4.jpg");
+    display: none;
+
+    @include md{
+        display: list-item;
+    } 
+}
 .life-fancybox{
     height: 200px;
     width: 200px;
@@ -233,7 +233,7 @@
     justify-content: center;
 
     font-size: rem-calc(20);
-    //color: transparent;
+    color: transparent;
 }
 
 .fancybox__container {

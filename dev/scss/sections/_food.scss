@@ -21,6 +21,12 @@
             grid-template-columns: auto 1200px auto;
             grid-template-areas: ". food-contain .";
         }
+
+
+        @include xl{
+            grid-template-columns: auto 4000px auto;
+            grid-template-areas: ". food-contain .";
+        }
     }
 
     #food-content-conainter{
@@ -58,6 +64,7 @@
                                  ". food-image food-text ."
                                  ". . food-text .";
         }
+
 
         #food-text{
             grid-area: food-text;

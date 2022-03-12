@@ -6,7 +6,6 @@ var colorButtonsLeft = document.querySelectorAll(".color-svg-l");
 var colorButtonsRight = document.querySelectorAll(".color-svg-r");
 var leftShell = document.querySelector("#main-shell-left");
 var rightShell = document.querySelector("#main-shell-right");
-//var rightShell = document.querySelector("#main-shell-right");
 
 export function leftPickerOptions(){
     colorButtonsLeft.forEach((button,i) => {

@@ -79,13 +79,13 @@ Fancybox.bind('[data-fancybox="gallery-1"]', {
     },
 });
 
-// Fancybox.bind('[data-fancybox="gallery-2"]', {
-//     Thumbs: false,
-//     Toolbar: false,
+Fancybox.bind('[data-fancybox="gallery-2"]', {
+    Thumbs: false,
+    Toolbar: false,
   
-//     Image: {
-//       zoom: false,
-//       click: false,
-//       wheel: "slide",
-//     },
-// });
+    Image: {
+      zoom: false,
+      click: false,
+      wheel: "slide",
+    },
+});

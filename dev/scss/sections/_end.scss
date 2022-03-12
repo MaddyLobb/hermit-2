@@ -2,129 +2,165 @@
     End
 ============= */
 #end{
+    height: 100%;
     width: 100vw;
     margin-top: -90px;
+
+    @include xl{
+        margin-top: -180px; 
+    }
 
     #darkPurpleWave{
         width: 100%;
         margin-bottom: -15px;
     }
-    #end-content-container{
+    #end-content-conainter{
+
+        @include xl{
+            grid-template-columns: auto 1200px auto;
+            grid-template-areas: ". end-contain .";
+        }
+
+    }
+
+    #end-content{
+        grid-area: end-contain;
+
         height: 100%;
         width: 100%;
         background-color: var(--darkpurple);
 
-        #end-content{
-            display: grid;
-            grid-template-columns: 16px auto 16px;
-            grid-template-areas: ". end-text ."
-                                 ". end-svg .";
-    
-            row-gap: 20px;
+        display: grid;
+        grid-template-columns: 16px auto 16px;
+        grid-template-areas: ". end-text ."
+                             ". end-svg .";
+        row-gap: 30px;
+        padding-top: 5%;
+        padding-bottom: 25%;
+
+        @include md{
+            grid-template-columns: auto 45% auto auto;
+            grid-template-areas: ". end-text . ."
+                                 ". end-text end-svg ."
+                                 ". end-text . .";
+            padding-bottom: 15%;
+            column-gap: 30px;
+        }
+
+        @include lg{
+            grid-template-columns: auto 40% auto 4%;
+            grid-template-areas: ". end-text . ."
+                                 ". end-text end-svg . ."
+                                 ". end-text . .";
+            column-gap: 0px;
+        }
+
+        @include xl{
+            grid-template-columns: auto 600px 500px auto;
+            grid-template-areas: ". end-text . ."
+                                 ". end-text end-svg ."
+                                 ". end-text . .";
+        }
+
+
+        #end-text{
+            grid-area: end-text;
+
+            padding: 30px 15px;
+            border: 5px white solid;
+            border-radius: 80px;
+            text-align: center;
+            color: var(--tan);
+        
 
             @include md{
-                grid-template-columns: 55% auto;
-                grid-template-areas: "end-text end-svg";
-                                                         
-                column-gap: 20px;
-                padding-bottom: 15%;
+                max-width: 450px;
             }
 
-            @include lg{
-                padding-top: 0%;
+            @include xl{
+                max-width: 550px;
             }
 
-            #end-text-container{
-                grid-area: end-text;
+            #end-title{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                
+                h2{
 
-                height: 100%;
-                width: 100%;
-
-                #end-text{
-                    justify-content: center;
-                    align-items: center;
-                    flex-direction: column;
-    
-                    padding: 50px 20px;
-                    border: 5px white solid;
-                    border-radius: 80px;
-                    text-align: center;
-                    color: var(--tan);
-
-                    margin-top: 50px;
-    
+                    font-size: rem-calc(26);
+                
                     @include md{
-                        padding: 80px 30px;
-                        max-width: 450px;
-                        margin-left: 40px;
-    
+                        font-size: rem-calc(64); 
                     }
-    
-                    @include lg{
-                        max-width: 100%;
-                    }
-    
-                    h2{
-                        font-size: rem-calc(26);
-    
-                        @include md{
-                            font-size: rem-calc(64); 
-                        }
-                    }
-    
-                    h3{
-                        margin: 25px 0px;
-                        font-size: rem-calc(16);
-    
-                        @include md{
-                            margin: 55px 0px;
-                            font-size: rem-calc(24); 
-                        }
-                    }
-    
-                    p{
-                        font-size: rem-calc(16);
-                        padding: 0px 10px 16px 10px;
-                        line-height: rem-calc(20);
-    
-    
-                        @include md{
-                            font-size: rem-calc(18); 
-                            padding: 0px 16px 16px 16px;
-                        }
+                }
+
+                h3{
+                    margin: 10px 0px;
+                    font-size: rem-calc(16);
+                    
+                    @include md{
+                        margin: 55px 0px;
+                        font-size: rem-calc(24); 
                     }
                 }
             }
 
-            #end-illustration-container{
-                grid-area: end-svg;
-    
-                width: 100%;
-        
+            #end-p{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+
+                p{
+                    font-size: rem-calc(16);
+                    line-height: rem-calc(20);
+                    padding: 0px 10px 16px 10px;
+                    
+                    @include md{
+                        font-size: rem-calc(18); 
+                        line-height: rem-calc(25);
+                        padding: 0px 16px 16px 16px;
+                    }
+                }
+            }
+        }
+
+        #end-illustration-container{
+            grid-area: end-svg;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            height: 100%;
+            width: 100%;
+
+            #end-illustrations{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-        
+                height: 100%;
+                width: 100%;
+
                 @include md{
-                    height: 800px;
-                    position: absolute;
-                    justify-content:right;
-                    align-items: center;
+                    display: grid;
+                    grid-template-columns:auto;
+                    grid-template-areas:"end-svg-1";
                 }
-        
-                #end-illustrations{
-                    width: 50%;
-                    padding-bottom: 5%;
-        
-                     @include md{
-                        width: 35%;
-                        margin-right: 40px;
-                        padding-bottom: 20px;
-                    }
-                     
-                }
-            
             }
+
+        }
+
+    }
+    
+    #closing-illustrations{
+        grid-area: end-svg-1;
+        width: 50%;
+    
+        @include md{
+            width: 90%;
         }
     }
 }
