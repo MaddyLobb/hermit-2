@@ -19,6 +19,9 @@ import { sectionListners } from "./sectionMain"
 
 import { scrollPage} from "./pageScroll"
 
+import { photoTrigger, photoTrigger0, photoTrigger2, photoTrigger3, photoTrigger4, photoTrigger5, photoTrigger6, photoTrigger7, photoTrigger8, photoTrigger9 } from "./scrollAnimation";
+import { photoTrigger1 } from "./scrollAnimation";
+
 
 
 
@@ -258,5 +261,17 @@ window.addEventListener('load', sectionListners);
 window.addEventListener('load', menuListners);
 window.addEventListener('resize', menuListners);
 
-window.addEventListener('load', displayWindowSize)
-window.addEventListener('resize', displayWindowSize)
+window.addEventListener('load', displayWindowSize);
+window.addEventListener('resize', displayWindowSize);
+
+window.addEventListener('load',  photoTrigger);
+window.addEventListener('load',  photoTrigger0);
+window.addEventListener('load',  photoTrigger1);
+window.addEventListener('load',  photoTrigger2);
+window.addEventListener('load',  photoTrigger3);
+window.addEventListener('load',  photoTrigger4);
+window.addEventListener('load',  photoTrigger5);
+window.addEventListener('load',  photoTrigger6);
+window.addEventListener('load',  photoTrigger7);
+window.addEventListener('load',  photoTrigger8);
+window.addEventListener('load',  photoTrigger9);
