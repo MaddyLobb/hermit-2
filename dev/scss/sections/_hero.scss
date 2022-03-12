@@ -9,10 +9,11 @@
     #hero-svg{
         height: 50%;
         width: 50%;
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        float: right;
+
+        @include md{
+            padding-right: 40px;
+        }
     }
 
     #hero-image{
