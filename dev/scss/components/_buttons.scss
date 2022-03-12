@@ -1,3 +1,19 @@
 /* =============
     Buttons
 ============= */
+// body{
+
+//     .format{
+
+//         // padding: 1000px;
+//         @include xl{
+//             margin: -13vh;
+//         }
+//     }
+// }
+
+button{
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+}

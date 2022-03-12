@@ -8,7 +8,7 @@ header {
 
 
 
-	background-color: #722B4A;
+	background-color: var(--purple);
 	left: 0;
 	// position: fixed;
 	top: 0;
@@ -32,10 +32,6 @@ header {
 
 		}
 		
-
-		
-		
-	
 
 		#circle-svg{
 
@@ -136,7 +132,7 @@ header {
 		// padding-top: 32px;
 		@include lg {
 			grid-template-areas: "survival nav search";
-			grid-template-columns: 10% auto 10%;
+			grid-template-columns: 10% auto 20%;
 			padding-right: 16px;
 		}
 		
@@ -189,6 +185,7 @@ header {
 		}
 
 		.theme-switch-wrapper {
+			z-index: 5;
 			grid-area: search;
 			display: flex;
 			align-items: center;
