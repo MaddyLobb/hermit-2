@@ -211,7 +211,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         column-gap: 5px;
+
+        @include md{
+            flex-direction: row;
+        }
     }
     #l-bottom{
         grid-area: color-left-bottom;
@@ -226,6 +231,11 @@
         justify-content: center;
         align-items: center;
         column-gap: 5px;
+        flex-direction: column;
+
+        @include md{
+            flex-direction: row;
+        }
     }
     #r-bottom{
         grid-area: color-right-bottom;
@@ -243,13 +253,8 @@
 
     #s-2{
         grid-area: s2;
-        display: none;
-
-        @include md{
-            display: list-item;
-            min-height: 76px;
-            min-width: 76px;
-        }
+        min-height: 76px;
+        min-width: 76px;
     }
 
     #s-3{
@@ -299,24 +304,13 @@
         grid-area: s7;
         // display: none;
         min-height: 76px;
-            min-width: 76px;
-
-        @include md{
-            // display: list-item;
-            // min-height: 76px;
-            // min-width: 76px;
-        }
+        min-width: 76px;
     }
 
     #s-8{
         grid-area: s8;
-        display: none;
-
-        @include md{
-            display: list-item;
-            min-height: 76px;
-            min-width: 76px;
-        }
+        min-height: 76px;
+        min-width: 76px;
     }
 
     #s-9{

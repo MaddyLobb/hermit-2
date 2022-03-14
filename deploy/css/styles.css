@@ -1427,7 +1427,13 @@ footer > div ul li a:visited:active {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   column-gap: 5px;
+}
+@media (min-width: 768px) {
+  #shell #l-top {
+    flex-direction: row;
+  }
 }
 #shell #l-bottom {
   grid-area: color-left-bottom;
@@ -1442,6 +1448,12 @@ footer > div ul li a:visited:active {
   justify-content: center;
   align-items: center;
   column-gap: 5px;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  #shell #r-top {
+    flex-direction: row;
+  }
 }
 #shell #r-bottom {
   grid-area: color-right-bottom;
@@ -1457,14 +1469,8 @@ footer > div ul li a:visited:active {
 }
 #shell #s-2 {
   grid-area: s2;
-  display: none;
-}
-@media (min-width: 768px) {
-  #shell #s-2 {
-    display: list-item;
-    min-height: 76px;
-    min-width: 76px;
-  }
+  min-height: 76px;
+  min-width: 76px;
 }
 #shell #s-3 {
   grid-area: s3;
@@ -1517,14 +1523,8 @@ footer > div ul li a:visited:active {
 }
 #shell #s-8 {
   grid-area: s8;
-  display: none;
-}
-@media (min-width: 768px) {
-  #shell #s-8 {
-    display: list-item;
-    min-height: 76px;
-    min-width: 76px;
-  }
+  min-height: 76px;
+  min-width: 76px;
 }
 #shell #s-9 {
   grid-area: s9;

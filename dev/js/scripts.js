@@ -69,27 +69,6 @@ if (currentTheme) {
 }
 
 window.addEventListener('load',  waveTL);
-//window.addEventListener('load', foodCarousel);
-
-// import { Carousel } from "@fancyapps/ui";
-
-// const foodCarousel = new Carousel(document.querySelector(".carousel-1"), {
-//     'center': false,
-//     //slidesPerPage: 1,
-// });
-
-// // Customize Fancybox
-// Fancybox.bind('[data-fancybox="gallery"]', {
-//     Carousel: {
-//       on: {
-//         change: (that) => {
-//           foodCarousel.slideTo(foodCarousel.findPageForSlide(that.page), {
-//             friction: 0,
-//           });
-//         },
-//       },
-//     },
-//   });
 
 
 Fancybox.bind('[data-fancybox="gallery-1"]', {
