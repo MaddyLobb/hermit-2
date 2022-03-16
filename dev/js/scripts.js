@@ -1,24 +1,12 @@
+import { Fancybox } from "@fancyapps/ui";
 import { waveTL } from "./waveColor";
 import { leftPickerOptions, rightPickerOptions } from "./colorPicker";
-import { Fancybox } from "@fancyapps/ui";
-
-
-
-
 import { burgerTL, circleTL} from "./burgerAnimation"
-
 import { displayWindowSize} from "./mobileResizing"
-
 import { menuAnimation} from "./mobileMenu"
-
 import { menuListners} from "./menu"
-
-
-
 import { sectionListners } from "./sectionMain"
-
 import { scrollPage} from "./pageScroll"
-
 import { photoTrigger, photoTrigger0, photoTrigger2, photoTrigger3, photoTrigger4, photoTrigger5, photoTrigger6, photoTrigger7, photoTrigger8, photoTrigger9 } from "./scrollAnimation";
 import { photoTrigger1 } from "./scrollAnimation";
 
@@ -53,8 +41,6 @@ function switchTheme(e){
 }
 
 toggleSwitch.addEventListener('change', switchTheme, false);
-
-//? localStorage.getItem('theme') :null
 
 const currentTheme = localStorage.getItem('theme');
 
@@ -231,11 +217,6 @@ function screenLocker(){
 
 
 window.addEventListener('load', sectionListners);
-
-
-
-
-
 
 window.addEventListener('load', menuListners);
 window.addEventListener('resize', menuListners);
